@@ -1,0 +1,388 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Server\\WebUI.Server.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\application\\Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\application\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.311\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.311\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.311\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Client\\WebUI.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Client\\WebUI.Client.csproj",
+        "projectName": "WebUI.Client",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Client\\WebUI.Client.csproj",
+        "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Shared\\WebUI.Shared.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Shared\\WebUI.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.16, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[6.0.16, 6.0.16]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.311\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Server\\WebUI.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Server\\WebUI.Server.csproj",
+        "projectName": "WebUI.Server",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Server\\WebUI.Server.csproj",
+        "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Server\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj"
+              },
+              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj"
+              },
+              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Client\\WebUI.Client.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Client\\WebUI.Client.csproj"
+              },
+              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Shared\\WebUI.Shared.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Shared\\WebUI.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.311\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WEbUi\\Shared\\WebUI.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WEbUi\\Shared\\WebUI.Shared.csproj",
+        "projectName": "WebUI.Shared",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WEbUi\\Shared\\WebUI.Shared.csproj",
+        "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WEbUi\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.311\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
