@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ncY9zVKkE8cx0oBHNhAWjeCf3YiElhBG9GOqqB3fY1cnwoki0V9IRG7GAk/OFYEZjFM68YCwK26ofB9E0tVgIA==",
+  "dgSpecHash": "ZkHJbvfvjEHAoJT6zxkMCXeAEbzl+tcAc6JyogRoWRyy/4YgI9EVWWljCsWfht16MMmkCyYiKQIK6X1/RBt6rg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WEbUi\\Shared\\WebUI.Shared.csproj",
+  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\webui\\Shared\\WebUI.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

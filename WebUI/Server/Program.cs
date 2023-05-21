@@ -1,9 +1,19 @@
 using Microsoft.AspNetCore.ResponseCompression;
+using CleanEjdg.Infrastructure.Persistance;
+using CleanEjdg.Infrastructure.SeedData;
+using Microsoft.EntityFrameworkCore;
+using CleanEjdg.Core.Application.Common;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddDbContext<ApplicationDbContext>( opts =>
+{
+    opts.UseSqlServer(builder.Configuration["ConnectionStrings:CatsConnection"]);
+    opts.EnableSensitiveDataLogging(true);
+});
+builder.Services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
@@ -32,5 +42,8 @@ app.UseRouting();
 app.MapRazorPages();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
+
+var applicationDbContext = app.Services.CreateScope().ServiceProvider.GetRequiredService<ApplicationDbContext>();
+CatSeedData.SeedDataBase(applicationDbContext);
 
 app.Run();

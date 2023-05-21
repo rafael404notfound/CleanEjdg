@@ -823,9 +823,9 @@ C:\Users\Rafita\source\repos\cleanejdg\WebUI\Client\bin\Debug\net6.0\wwwroot\_fr
 C:\Users\Rafita\source\repos\cleanejdg\WebUI\Client\bin\Debug\net6.0\wwwroot\_framework\Domain.pdb.gz
 C:\Users\Rafita\source\repos\cleanejdg\WebUI\Client\bin\Debug\net6.0\Domain.dll
 C:\Users\Rafita\source\repos\cleanejdg\WebUI\Client\bin\Debug\net6.0\Domain.pdb
-C:\Users\Rafita\source\repos\CleanEjdg\WebUi\Client\obj\Debug\net6.0\build-gz\n3yz1dWO.gz
-C:\Users\Rafita\source\repos\CleanEjdg\WebUi\Client\obj\Debug\net6.0\build-gz\J86lg0su.gz
-C:\Users\Rafita\source\repos\CleanEjdg\WebUi\Client\obj\Debug\net6.0\build-gz\aNYx4K8X.gz
-C:\Users\Rafita\source\repos\CleanEjdg\WebUi\Client\obj\Debug\net6.0\build-gz\5+lZhPiE.gz
-C:\Users\Rafita\source\repos\CleanEjdg\WebUi\Client\obj\Debug\net6.0\build-gz\XU+Uscmo.gz
-C:\Users\Rafita\source\repos\CleanEjdg\WebUi\Client\obj\Debug\net6.0\build-gz\0d4Y4t+W.gz
+C:\Users\Rafita\source\repos\CleanEjdg\webui\Client\obj\Debug\net6.0\build-gz\n3yz1dWO.gz
+C:\Users\Rafita\source\repos\CleanEjdg\webui\Client\obj\Debug\net6.0\build-gz\7AjrOt9D.gz
+C:\Users\Rafita\source\repos\CleanEjdg\webui\Client\obj\Debug\net6.0\build-gz\wLokpdiU.gz
+C:\Users\Rafita\source\repos\CleanEjdg\webui\Client\obj\Debug\net6.0\build-gz\J86lg0su.gz
+C:\Users\Rafita\source\repos\CleanEjdg\webui\Client\obj\Debug\net6.0\build-gz\6NA5tg+h.gz
+C:\Users\Rafita\source\repos\CleanEjdg\webui\Client\obj\Debug\net6.0\build-gz\h5jUKCzN.gz
