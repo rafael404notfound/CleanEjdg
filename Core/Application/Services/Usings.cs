@@ -1,0 +1,1 @@
+global using CleanEjdg.Core.Domain.Entities;

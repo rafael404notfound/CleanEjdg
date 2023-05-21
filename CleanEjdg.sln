@@ -13,17 +13,24 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebUi", "WebUi", "{27A74D54-5934-405E-88A6-A07E69625AAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI.Client", "WebUi\Client\WebUI.Client.csproj", "{19D51B59-471A-4FBD-9222-74AFC184CAA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI.Client", "WebUi\Client\WebUI.Client.csproj", "{19D51B59-471A-4FBD-9222-74AFC184CAA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI.Server", "WebUi\Server\WebUI.Server.csproj", "{8AE4ED56-BFB7-4BF0-A4AA-357E2A5670A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI.Server", "WebUi\Server\WebUI.Server.csproj", "{8AE4ED56-BFB7-4BF0-A4AA-357E2A5670A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI.Shared", "WEbUi\Shared\WebUI.Shared.csproj", "{A3A160B8-7100-4C61-9A68-476600E77B02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI.Shared", "WEbUi\Shared\WebUI.Shared.csproj", "{A3A160B8-7100-4C61-9A68-476600E77B02}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4899A1C8-8F4F-4434-A46B-8C07A4CADAD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.UnitTests", "tests\Domain.UnitTests\Domain.UnitTests.csproj", "{AF856A1F-CEAB-44D8-AFD2-5D55838EDDB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.UnitTests", "tests\Domain.UnitTests\Domain.UnitTests.csproj", "{AF856A1F-CEAB-44D8-AFD2-5D55838EDDB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUi.Server.IntegrationTests", "tests\WebUI.Server.IntegrationTests\WebUi.Server.IntegrationTests.csproj", "{80090EB0-0EB0-4665-8BA9-3908E6556D50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUi.Server.IntegrationTests", "tests\WebUI.Server.IntegrationTests\WebUi.Server.IntegrationTests.csproj", "{80090EB0-0EB0-4665-8BA9-3908E6556D50}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application.UnitTests", "tests\Application.UnitTests\Application.UnitTests.csproj", "{4B2E1759-B119-486D-AA20-8D922E5A7911}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4FC90337-C0E0-4AC2-8840-64A5500372A0}"
+	ProjectSection(SolutionItems) = preProject
+		ToDo.txt = ToDo.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +70,10 @@ Global
 		{80090EB0-0EB0-4665-8BA9-3908E6556D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80090EB0-0EB0-4665-8BA9-3908E6556D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80090EB0-0EB0-4665-8BA9-3908E6556D50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B2E1759-B119-486D-AA20-8D922E5A7911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B2E1759-B119-486D-AA20-8D922E5A7911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B2E1759-B119-486D-AA20-8D922E5A7911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B2E1759-B119-486D-AA20-8D922E5A7911}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +86,7 @@ Global
 		{A3A160B8-7100-4C61-9A68-476600E77B02} = {27A74D54-5934-405E-88A6-A07E69625AAD}
 		{AF856A1F-CEAB-44D8-AFD2-5D55838EDDB1} = {4899A1C8-8F4F-4434-A46B-8C07A4CADAD3}
 		{80090EB0-0EB0-4665-8BA9-3908E6556D50} = {4899A1C8-8F4F-4434-A46B-8C07A4CADAD3}
+		{4B2E1759-B119-486D-AA20-8D922E5A7911} = {4899A1C8-8F4F-4434-A46B-8C07A4CADAD3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D6D417D8-B979-45F1-9784-F4F505F27FC8}

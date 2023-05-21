@@ -46,3 +46,9 @@ C:\Users\Rafita\source\repos\cleanejdg\webui\server\obj\Debug\net6.0\refint\WebU
 C:\Users\Rafita\source\repos\cleanejdg\webui\server\obj\Debug\net6.0\WebUI.Server.pdb
 C:\Users\Rafita\source\repos\cleanejdg\webui\server\obj\Debug\net6.0\WebUI.Server.genruntimeconfig.cache
 C:\Users\Rafita\source\repos\cleanejdg\webui\server\obj\Debug\net6.0\ref\WebUI.Server.dll
+C:\Users\Rafita\source\repos\cleanejdg\WebUI\Server\bin\Debug\net6.0\Application.dll
+C:\Users\Rafita\source\repos\cleanejdg\WebUI\Server\bin\Debug\net6.0\Domain.dll
+C:\Users\Rafita\source\repos\cleanejdg\WebUI\Server\bin\Debug\net6.0\Infrastructure.dll
+C:\Users\Rafita\source\repos\cleanejdg\WebUI\Server\bin\Debug\net6.0\Application.pdb
+C:\Users\Rafita\source\repos\cleanejdg\WebUI\Server\bin\Debug\net6.0\Infrastructure.pdb
+C:\Users\Rafita\source\repos\cleanejdg\WebUI\Server\bin\Debug\net6.0\Domain.pdb

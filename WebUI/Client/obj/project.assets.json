@@ -391,6 +391,16 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
+      },
       "WebUI.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -784,6 +794,16 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
         }
       },
       "WebUI.Shared/1.0.0": {
@@ -1558,6 +1578,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../../Core/Domain/Domain.csproj",
+      "msbuildProject": "../../Core/Domain/Domain.csproj"
+    },
     "WebUI.Shared/1.0.0": {
       "type": "project",
       "path": "../Shared/WebUI.Shared.csproj",
@@ -1566,6 +1591,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Domain >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.16",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.16",
       "WebUI.Shared >= 1.0.0"
@@ -1598,6 +1624,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj"
+            },
             "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Shared\\WebUI.Shared.csproj": {
               "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Shared\\WebUI.Shared.csproj"
             }

@@ -1,6 +1,5 @@
 C:\Users\Rafita\source\repos\cleanejdg\Core\Application\bin\Debug\net6.0\Application.deps.json
 C:\Users\Rafita\source\repos\cleanejdg\Core\Application\bin\Debug\net6.0\Application.dll
-C:\Users\Rafita\source\repos\cleanejdg\Core\Application\bin\Debug\net6.0\ref\Application.dll
 C:\Users\Rafita\source\repos\cleanejdg\Core\Application\bin\Debug\net6.0\Application.pdb
 C:\Users\Rafita\source\repos\cleanejdg\Core\Application\bin\Debug\net6.0\Domain.dll
 C:\Users\Rafita\source\repos\cleanejdg\Core\Application\bin\Debug\net6.0\Domain.pdb
@@ -13,3 +12,4 @@ C:\Users\Rafita\source\repos\cleanejdg\Core\Application\obj\Debug\net6.0\Applica
 C:\Users\Rafita\source\repos\cleanejdg\Core\Application\obj\Debug\net6.0\Application.dll
 C:\Users\Rafita\source\repos\cleanejdg\Core\Application\obj\Debug\net6.0\ref\Application.dll
 C:\Users\Rafita\source\repos\cleanejdg\Core\Application\obj\Debug\net6.0\Application.pdb
+C:\Users\Rafita\source\repos\cleanejdg\Core\Application\obj\Debug\net6.0\refint\Application.dll

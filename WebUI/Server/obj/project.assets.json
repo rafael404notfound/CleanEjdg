@@ -440,6 +440,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Domain": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "6.0.16",
           "WebUI.Shared": "1.0.0"
         },
