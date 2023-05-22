@@ -3,6 +3,9 @@ using CleanEjdg.Infrastructure.Persistance;
 using CleanEjdg.Infrastructure.SeedData;
 using Microsoft.EntityFrameworkCore;
 using CleanEjdg.Core.Application.Common;
+using CleanEjdg.Core.Application.Repositories;
+using CleanEjdg.Core.Application.Services;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,8 +17,15 @@ builder.Services.AddDbContext<ApplicationDbContext>( opts =>
     opts.EnableSensitiveDataLogging(true);
 });
 builder.Services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
+builder.Services.AddScoped<ICatRepository, EFCatRepository>();
+builder.Services.AddScoped<IDateTime, DateTimeServer>();
+builder.Services.AddScoped<ICatService, CatService>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Ejdg Api", Version = "v1" });
+});
 
 var app = builder.Build();
 
@@ -42,6 +52,12 @@ app.UseRouting();
 app.MapRazorPages();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
+
+app.UseSwagger();
+app.UseSwaggerUI(opts =>
+{
+    opts.SwaggerEndpoint("/swagger/v1/swagger.json", "Ejdg Api");
+});
 
 var applicationDbContext = app.Services.CreateScope().ServiceProvider.GetRequiredService<ApplicationDbContext>();
 CatSeedData.SeedDataBase(applicationDbContext);

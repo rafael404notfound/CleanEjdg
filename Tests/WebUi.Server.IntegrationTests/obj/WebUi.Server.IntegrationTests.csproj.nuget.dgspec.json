@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\tests\\WebUI.Server.IntegrationTests\\WebUi.Server.IntegrationTests.csproj": {}
+    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\tests\\WebUI.Server.IntegrationTests\\WebUi.Server.IntegrationTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\application\\Application.csproj": {
+    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\application\\Application.csproj",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\application\\Application.csproj",
         "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\application\\obj\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj"
+              "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj"
               }
             }
           }
@@ -74,14 +74,14 @@
         }
       }
     },
-    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj": {
+    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -128,14 +128,14 @@
         }
       }
     },
-    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -152,8 +152,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj"
+              "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\application\\Application.csproj"
               }
             }
           }
@@ -198,14 +198,14 @@
         }
       }
     },
-    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\tests\\WebUI.Server.IntegrationTests\\WebUi.Server.IntegrationTests.csproj": {
+    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\tests\\WebUI.Server.IntegrationTests\\WebUi.Server.IntegrationTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\tests\\WebUI.Server.IntegrationTests\\WebUi.Server.IntegrationTests.csproj",
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\tests\\WebUI.Server.IntegrationTests\\WebUi.Server.IntegrationTests.csproj",
         "projectName": "WebUi.Server.IntegrationTests",
-        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\tests\\WebUI.Server.IntegrationTests\\WebUi.Server.IntegrationTests.csproj",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\tests\\WebUI.Server.IntegrationTests\\WebUi.Server.IntegrationTests.csproj",
         "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\tests\\WebUI.Server.IntegrationTests\\obj\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\tests\\WebUI.Server.IntegrationTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -222,8 +222,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUI\\Server\\WebUI.Server.csproj": {
-                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUI\\Server\\WebUI.Server.csproj"
+              "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WebUi\\Server\\WebUI.Server.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WebUi\\Server\\WebUI.Server.csproj"
               }
             }
           }
@@ -290,14 +290,14 @@
         }
       }
     },
-    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Client\\WebUI.Client.csproj": {
+    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WebUi\\Client\\WebUI.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Client\\WebUI.Client.csproj",
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WebUi\\Client\\WebUI.Client.csproj",
         "projectName": "WebUI.Client",
-        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Client\\WebUI.Client.csproj",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WebUi\\Client\\WebUI.Client.csproj",
         "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Client\\obj\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WebUi\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -314,11 +314,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj"
+              "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Shared\\WebUI.Shared.csproj": {
-                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Shared\\WebUI.Shared.csproj"
+              "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WEbUi\\Shared\\WebUI.Shared.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WEbUi\\Shared\\WebUI.Shared.csproj"
               }
             }
           }
@@ -373,14 +373,14 @@
         }
       }
     },
-    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Server\\WebUI.Server.csproj": {
+    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WebUi\\Server\\WebUI.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Server\\WebUI.Server.csproj",
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WebUi\\Server\\WebUI.Server.csproj",
         "projectName": "WebUI.Server",
-        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Server\\WebUI.Server.csproj",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WebUi\\Server\\WebUI.Server.csproj",
         "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Server\\obj\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WebUi\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -397,20 +397,20 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj"
+              "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\application\\Application.csproj"
               },
-              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj"
+              "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj"
               },
-              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Client\\WebUI.Client.csproj": {
-                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Client\\WebUI.Client.csproj"
+              "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WebUi\\Client\\WebUI.Client.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WebUi\\Client\\WebUI.Client.csproj"
               },
-              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Shared\\WebUI.Shared.csproj": {
-                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Shared\\WebUI.Shared.csproj"
+              "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WEbUi\\Shared\\WebUI.Shared.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WEbUi\\Shared\\WebUI.Shared.csproj"
               }
             }
           }
@@ -438,6 +438,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
             }
           },
           "imports": [
@@ -462,14 +466,14 @@
         }
       }
     },
-    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WEbUi\\Shared\\WebUI.Shared.csproj": {
+    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WEbUi\\Shared\\WebUI.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WEbUi\\Shared\\WebUI.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WEbUi\\Shared\\WebUI.Shared.csproj",
         "projectName": "WebUI.Shared",
-        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WEbUi\\Shared\\WebUI.Shared.csproj",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WEbUi\\Shared\\WebUI.Shared.csproj",
         "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WEbUi\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WEbUi\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",

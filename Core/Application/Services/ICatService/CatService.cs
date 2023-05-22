@@ -1,10 +1,15 @@
+using CleanEjdg.Core.Application.Repositories;
+
 namespace CleanEjdg.Core.Application.Services {
 
     public class CatService : ICatService {
+        
         IDateTime DateTime;
-        public CatService(IDateTime dateTime)
+        ICatRepository CatRepo;
+        public CatService(IDateTime dateTime, ICatRepository catRepo)
         {
             DateTime = dateTime;
+            CatRepo = catRepo;
         }
 
         /*
@@ -32,6 +37,11 @@ namespace CleanEjdg.Core.Application.Services {
             }      
             
             return result;
+        }
+
+        public IEnumerable<Cat> GetAllCats()
+        {
+            return CatRepo.GetAll();
         }
     }
 }

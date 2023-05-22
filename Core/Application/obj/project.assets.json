@@ -1844,11 +1844,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\application\\Application.csproj",
+      "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\application\\Application.csproj",
+      "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj",
       "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\application\\obj\\",
+      "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",

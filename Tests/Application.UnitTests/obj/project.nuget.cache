@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1faRWq8fR1a0uPlwY3OcBAng3jRZukbTa5C6MZ5TgiL0gwh0+o/XY4Ho63CtEudLmIQCt/gzQdh17MGeEaD+8Q==",
+  "dgSpecHash": "2xT4dD1DJqHG42noWn/6EPLkaAGCUT8O62Rd41iPpI8zDKuul1W/m2Qjjtd2K7uMkf6QODekwIsTucWyiixUCQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\tests\\Application.UnitTests\\Application.UnitTests.csproj",
+  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\tests\\Application.UnitTests\\Application.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rafita\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
