@@ -38,10 +38,5 @@ namespace CleanEjdg.Core.Application.Services {
             
             return result;
         }
-
-        public IEnumerable<Cat> GetAllCats()
-        {
-            return CatRepo.GetAll();
-        }
     }
 }

@@ -33,6 +33,15 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("HasChip")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsSterilized")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsVaccinated")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 

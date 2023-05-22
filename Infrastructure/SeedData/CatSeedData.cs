@@ -13,8 +13,20 @@ namespace CleanEjdg.Infrastructure.SeedData
             if(context.Cats.Count() == 0)
             {
                 context.Cats.AddRange(
-                    new Cat { Name = "Susan", DateOfBirth = new DateTime(2021, 2, 23) },
-                    new Cat { Name = "Yuki", DateOfBirth = new DateTime(2022, 8, 15) }
+                    new Cat { 
+                        Name = "Susan", 
+                        DateOfBirth = new DateTime(2021, 2, 23),
+                        HasChip = true,
+                        IsSterilized = true,
+                        IsVaccinated = true
+                    },
+                    new Cat { 
+                        Name = "Yuki", 
+                        DateOfBirth = new DateTime(2022, 8, 15),
+                        HasChip = true,
+                        IsSterilized = true,
+                        IsVaccinated = false
+                    }
                     );
                 context.SaveChanges();
             }

@@ -27,6 +27,7 @@ namespace CleanEjdg.Tests.Application.UnitTests {
             Assert.Equal(expectedMonths, result["Months"]);
         }
 
+        /*
         [Fact]
         public void GetCats_Return_All_Cats_In_Database()
         {
@@ -49,5 +50,6 @@ namespace CleanEjdg.Tests.Application.UnitTests {
             Assert.Equal("c2", catArray[1].Name);
             Assert.Equal("c3", catArray[2].Name);
         }
+        */
     }
 }

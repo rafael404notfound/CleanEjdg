@@ -1,10 +1,18 @@
 using CleanEjdg.Core.Domain.Common;
+using System.ComponentModel.DataAnnotations;
 
 namespace CleanEjdg.Core.Domain.Entities {
 
     public class Cat : BaseEntity {
         public string? Name { get; set; } = string.Empty;
+        [Required]
         public DateTime DateOfBirth { get; set; }
+        [Required]
+        public bool IsVaccinated { get; set; } = false;
+        [Required]
+        public bool HasChip { get; set; } = false;
+        [Required]
+        public bool IsSterilized { get; set; } = false;
 
 
         /* *****NO LONGER NEEDED BEACAUSE AGE IS NOW CALCULATED THROUGH CATSERVICE*****

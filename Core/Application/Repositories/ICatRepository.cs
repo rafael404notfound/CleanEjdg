@@ -9,7 +9,7 @@ namespace CleanEjdg.Core.Application.Repositories
     public interface ICatRepository
     {
         IQueryable<Cat> GetAll();
-        IQueryable<Cat> Get(int id);
+        Task<Cat> Get(int id);
         void Create(Cat entity);
         void Update(Cat entity);
         void Delete(Cat entity);

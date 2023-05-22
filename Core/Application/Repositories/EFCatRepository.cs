@@ -21,9 +21,9 @@ namespace CleanEjdg.Core.Application.Repositories
             throw new NotImplementedException();
         }
 
-        public IQueryable<Cat> Get(int id)
+        public async Task<Cat> Get(int id)
         {
-            throw new NotImplementedException();
+            return await DbContext.Cats.FindAsync(id) ?? new Cat();
         }
 
         public IQueryable<Cat> GetAll()
