@@ -3,7 +3,7 @@ using CleanEjdg.Core.Domain.Entities;
 
 namespace CleanEjdg.Core.Application.Repositories
 {
-    public class EFCatRepository : ICatRepository
+    public class EFCatRepository : IRepositoryBase<Cat>
     {
         IApplicationDbContext DbContext;
         public EFCatRepository(IApplicationDbContext dbContext)
@@ -11,14 +11,16 @@ namespace CleanEjdg.Core.Application.Repositories
             DbContext = dbContext;
         }
 
-        public void Create(Cat entity)
+        public async Task Create(Cat entity)
         {
-            throw new NotImplementedException();
+            await DbContext.Cats.AddAsync(entity);
+            await DbContext.SaveChangesAsync();
         }
 
-        public void Delete(Cat entity)
+        public async Task Delete(int id)
         {
-            throw new NotImplementedException();
+            DbContext.Cats.Remove(new Cat { Id = id });
+            await DbContext.SaveChangesAsync();            
         }
 
         public async Task<Cat> Get(int id)
@@ -31,9 +33,10 @@ namespace CleanEjdg.Core.Application.Repositories
             return DbContext.Cats;
         }
 
-        public void Update(Cat entity)
+        public async Task Update(Cat entity)
         {
-            throw new NotImplementedException();
+            DbContext.Cats.Update(entity);
+            await DbContext.SaveChangesAsync();
         }
     }
 }

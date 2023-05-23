@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Smo7DVzzWxE5Axqzx18pqRh2oDx4iLRQp7TGjd31MADZkh4dP3zX2Qy4iEcfPFFReD37uEhLpno/jqiM+SXp6g==",
+  "dgSpecHash": "TrY3R7E5lcld4SHJ31QTCVghQJppenNA88tohriIrc2K4xVLv3OHevrUAEiwkbnpdlfey0e7BJIMBQy1mGCykw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rafita\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

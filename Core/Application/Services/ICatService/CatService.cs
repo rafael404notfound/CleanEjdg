@@ -5,11 +5,9 @@ namespace CleanEjdg.Core.Application.Services {
     public class CatService : ICatService {
         
         IDateTime DateTime;
-        ICatRepository CatRepo;
-        public CatService(IDateTime dateTime, ICatRepository catRepo)
+        public CatService(IDateTime dateTime)
         {
             DateTime = dateTime;
-            CatRepo = catRepo;
         }
 
         /*

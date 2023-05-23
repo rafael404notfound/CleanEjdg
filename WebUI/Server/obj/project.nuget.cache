@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sTh1IjP9xxjanEuKZ6BUyItoW++q+p3C91dbOItIZcWv+CbFQuX0+rpkKo8RRH3msWI4lLKdaBpC2/pQjxvwRA==",
+  "dgSpecHash": "gUhr6RdfbhjfkX30lFPb2UFbYZQ1epUQndhLjFLopvbEYlYDHDwArmgFqp+N1cnxUNIH5Y6W8PA8HukdUh0YbQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\webui\\server\\WebUI.Server.csproj",
+  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WebUi\\Server\\WebUI.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rafita\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.16\\microsoft.aspnetcore.authorization.6.0.16.nupkg.sha512",
@@ -51,6 +51,7 @@
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Rafita\\.nuget\\packages\\mudblazor\\6.2.5\\mudblazor.6.2.5.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",

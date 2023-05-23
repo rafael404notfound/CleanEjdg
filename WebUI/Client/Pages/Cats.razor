@@ -1,0 +1,37 @@
+﻿@page "/Gatos"
+@inject HttpClient Http
+
+<PageTitle>Gatos</PageTitle>
+
+@if (CatArray != null)
+{
+	<MudGrid Justify="Justify.Center">
+		@foreach(var cat in CatArray)
+		{
+			<MudItem>
+				<MudCard>
+					<MudCardHeader>
+						<CardHeaderContent>
+							<MudText Typo="Typo.h6">@cat.Name</MudText>
+						</CardHeaderContent>
+					</MudCardHeader>
+					<MudCardContent>
+						<MudText>@cat.DateOfBirth.ToString()</MudText>
+					</MudCardContent>
+				</MudCard>
+			</MudItem>
+		}
+	</MudGrid>
+}
+
+
+
+@code {
+
+	private IEnumerable<Cat>? CatArray;
+
+	protected override async Task OnInitializedAsync()
+	{
+		CatArray = await Http.GetFromJsonAsync<IEnumerable<Cat>>("api/cats");
+	}
+}

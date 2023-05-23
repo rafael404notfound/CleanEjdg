@@ -90,3 +90,4 @@ C:\Users\Rafita\source\repos\CleanEjdg\webui\server\bin\Debug\net6.0\Swashbuckle
 C:\Users\Rafita\source\repos\CleanEjdg\webui\server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Rafita\source\repos\CleanEjdg\webui\server\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Rafita\source\repos\CleanEjdg\webui\server\obj\Debug\net6.0\WebUI.Server.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Rafita\source\repos\cleanejdg\webui\server\bin\Debug\net6.0\MudBlazor.dll

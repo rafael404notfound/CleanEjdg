@@ -6,6 +6,7 @@ using CleanEjdg.Core.Application.Common;
 using CleanEjdg.Core.Application.Repositories;
 using CleanEjdg.Core.Application.Services;
 using Microsoft.OpenApi.Models;
+using CleanEjdg.Core.Domain.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,9 +18,8 @@ builder.Services.AddDbContext<ApplicationDbContext>( opts =>
     opts.EnableSensitiveDataLogging(true);
 });
 builder.Services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
-builder.Services.AddScoped<ICatRepository, EFCatRepository>();
+builder.Services.AddScoped<IRepositoryBase<Cat>, EFCatRepository>();
 builder.Services.AddScoped<IDateTime, DateTimeServer>();
-builder.Services.AddScoped<ICatService, CatService>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddSwaggerGen(c =>

@@ -175,3 +175,4 @@ C:\Users\Rafita\source\repos\cleanejdg\tests\WebUI.Server.IntegrationTests\bin\D
 C:\Users\Rafita\source\repos\cleanejdg\tests\WebUI.Server.IntegrationTests\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Rafita\source\repos\cleanejdg\tests\WebUI.Server.IntegrationTests\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Rafita\source\repos\cleanejdg\tests\WebUI.Server.IntegrationTests\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Rafita\source\repos\cleanejdg\tests\WebUI.Server.IntegrationTests\bin\Debug\net6.0\MudBlazor.dll

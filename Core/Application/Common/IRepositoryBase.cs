@@ -9,9 +9,9 @@ namespace CleanEjdg.Core.Application.Common
     public interface IRepositoryBase<T>
     {
         IQueryable<T> GetAll();
-        IQueryable<T> Get(int id);
-        void Create(T entity);
-        void Update(T entity);
-        void Delete(T entity);
+        Task<T> Get(int id);
+        Task Create(T entity);
+        Task Update(T entity);
+        Task Delete(int id);
     }
 }

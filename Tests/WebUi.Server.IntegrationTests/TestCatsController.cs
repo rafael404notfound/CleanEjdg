@@ -5,7 +5,7 @@ namespace CleanEjdg.Tests.WebUI.Server.IntegrationTests {
         [Fact]
         public void GetCats_OnSucces_ReturnsStatusCode200(){
             //Arrange
-            var catRepoMock = new Mock<ICatRepository>();
+            var catRepoMock = new Mock<IRepositoryBase<Cat>>();
             catRepoMock.Setup(m => m.GetAll()).Returns((new Cat[] {
                 new Cat { Id = 1, DateOfBirth = new DateTime(2021, 8, 12), Name = "c1" },
                 new Cat { Id = 2, DateOfBirth = new DateTime(2018, 2, 24), Name = "c2" },

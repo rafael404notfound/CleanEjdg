@@ -13,5 +13,10 @@ namespace CleanEjdg.Infrastructure.Persistance
         }
 
         public DbSet<Cat> Cats => Set<Cat>();
+
+        async Task IApplicationDbContext.SaveChangesAsync()
+        {
+            await base.SaveChangesAsync();
+        }
     }
 }

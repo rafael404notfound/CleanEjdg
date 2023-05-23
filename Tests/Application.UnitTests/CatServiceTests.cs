@@ -10,14 +10,13 @@ namespace CleanEjdg.Tests.Application.UnitTests {
             //Arrange
             var dateTimeMock = new Mock<IDateTime>();
             dateTimeMock.Setup(m => m.Now).Returns(new DateTime(2023, 5, 20));
-            var catRepoMock = new Mock<ICatRepository>();
 
             var cat = new Cat{
                 Name = "c1",
                 DateOfBirth = new  DateTime(yearOfBirth, monthOfBirth, 1)
             };
 
-            var sut = new CatService(dateTimeMock.Object, catRepoMock.Object);
+            var sut = new CatService(dateTimeMock.Object);
             
             //Act
             IDictionary<string, int> result = sut.CatAge(cat);

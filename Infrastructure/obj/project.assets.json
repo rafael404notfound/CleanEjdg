@@ -1841,8 +1841,8 @@
     },
     "Application/1.0.0": {
       "type": "project",
-      "path": "../Core/Application/Application.csproj",
-      "msbuildProject": "../Core/Application/Application.csproj"
+      "path": "../Core/application/Application.csproj",
+      "msbuildProject": "../Core/application/Application.csproj"
     },
     "Domain/1.0.0": {
       "type": "project",
@@ -1863,11 +1863,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1884,8 +1884,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj"
+            "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\application\\Application.csproj": {
+              "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\application\\Application.csproj"
             }
           }
         }

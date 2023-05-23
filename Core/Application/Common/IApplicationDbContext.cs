@@ -7,6 +7,7 @@ namespace CleanEjdg.Core.Application.Common
     {
         DbSet<Cat> Cats { get; }
 
+        Task SaveChangesAsync();
 
     }
 }

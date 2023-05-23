@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cJbXQBiRX6IAfG6z5oD+HdOtN1GtaGz7R1aG3B7vLxQ4PzQp6DqblgZ5Q5LSBG4pBCt+98f71i3Tu5jUC0cnGg==",
+  "dgSpecHash": "VybDF73SDQd9TjGxqV5TlCGNxdHXeWmWpJ73HYtq1/8qrExIsuioPCw1vko05mXj2BbsKZYF0hWvfgbGnDl3uw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\tests\\WebUI.Server.IntegrationTests\\WebUi.Server.IntegrationTests.csproj",
+  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\tests\\WebUI.Server.IntegrationTests\\WebUi.Server.IntegrationTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rafita\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
@@ -95,6 +95,7 @@
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\moq\\4.18.4\\moq.4.18.4.nupkg.sha512",
+    "C:\\Users\\Rafita\\.nuget\\packages\\mudblazor\\6.2.5\\mudblazor.6.2.5.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\nuget.frameworks\\5.11.0\\nuget.frameworks.5.11.0.nupkg.sha512",
