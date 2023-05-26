@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\application\\Application.csproj": {
+    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\application\\Application.csproj",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\application\\obj\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj"
+              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj"
               }
             }
           }
@@ -44,15 +44,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[6.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[7.0.4, )"
             }
           },
           "imports": [
@@ -61,7 +55,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -70,18 +65,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.311\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj": {
+    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -115,7 +110,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -124,18 +120,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.311\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -152,8 +148,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\application\\Application.csproj"
+              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj"
               }
             }
           }
@@ -168,15 +164,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[7.0.5, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.4, )"
             }
           },
           "imports": [
@@ -185,7 +179,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -194,7 +189,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.311\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }

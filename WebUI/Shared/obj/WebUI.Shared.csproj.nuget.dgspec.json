@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WEbUi\\Shared\\WebUI.Shared.csproj": {}
+    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\webui\\Shared\\WebUI.Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WEbUi\\Shared\\WebUI.Shared.csproj": {
+    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\webui\\Shared\\WebUI.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WEbUi\\Shared\\WebUI.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\webui\\Shared\\WebUI.Shared.csproj",
         "projectName": "WebUI.Shared",
-        "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WEbUi\\Shared\\WebUI.Shared.csproj",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\webui\\Shared\\WebUI.Shared.csproj",
         "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WEbUi\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\webui\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,7 +45,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -54,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.311\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -7,7 +7,7 @@ namespace CleanEjdg.Infrastructure.SeedData
 {
     public static class CatSeedData
     {
-        public static void SeedDataBase(ApplicationDbContext context)
+        public static void SeedDataBase(PgsqlDbContext context)
         {
             context.Database.Migrate();
             if(context.Cats.Count() == 0)

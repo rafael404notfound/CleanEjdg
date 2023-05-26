@@ -13,5 +13,3 @@ C:\Users\Rafita\source\repos\cleanejdg\Core\Application\obj\Debug\net6.0\Applica
 C:\Users\Rafita\source\repos\cleanejdg\Core\Application\obj\Debug\net6.0\ref\Application.dll
 C:\Users\Rafita\source\repos\cleanejdg\Core\Application\obj\Debug\net6.0\Application.pdb
 C:\Users\Rafita\source\repos\cleanejdg\Core\Application\obj\Debug\net6.0\refint\Application.dll
-C:\Users\Rafita\source\repos\CleanEjdg\Core\application\bin\Debug\net6.0\Application.runtimeconfig.json
-C:\Users\Rafita\source\repos\CleanEjdg\Core\application\obj\Debug\net6.0\Application.genruntimeconfig.cache
