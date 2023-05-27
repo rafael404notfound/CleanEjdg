@@ -7,6 +7,7 @@ namespace CleanEjdg.Infrastructure.Persistance
 {
     public class ApplicationDbContext : DbContext, IApplicationDbContext 
     {
+        public string ConnectionString { get; set; } = "";
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> opts) : base(opts)
         {
 

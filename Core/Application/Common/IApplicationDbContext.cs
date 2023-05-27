@@ -7,6 +7,8 @@ namespace CleanEjdg.Core.Application.Common
     {
         DbSet<Cat> Cats { get; }
 
+        string ConnectionString { get; }
+
         Task SaveChangesAsync();
 
     }

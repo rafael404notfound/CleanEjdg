@@ -68,8 +68,8 @@ app.UseSwaggerUI(opts =>
     opts.SwaggerEndpoint("/swagger/v1/swagger.json", "Ejdg Api");
 });
 
-var applicationDbContext = app.Services.CreateScope().ServiceProvider.GetRequiredService<PgsqlDbContext>();
-CatSeedData.SeedDataBase(applicationDbContext);
+//var applicationDbContext = app.Services.CreateScope().ServiceProvider.GetRequiredService<PgsqlDbContext>();
+//CatSeedData.SeedDataBase(applicationDbContext);
 
 app.Run();
 

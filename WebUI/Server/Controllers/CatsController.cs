@@ -17,7 +17,7 @@ namespace WebUI.Server.Controllers {
         [HttpGet]
         public IActionResult GetCats(){
             IEnumerable<Cat> Cats = CatRepo.GetAll();
-            if (Cats.Count() != 0)
+            if (Cats.Count() != 0 && Cats != null)
             {
                 return Ok(Cats);
             } else

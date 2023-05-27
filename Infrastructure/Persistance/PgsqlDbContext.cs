@@ -7,15 +7,14 @@ namespace CleanEjdg.Infrastructure.Persistance
 {
     public class PgsqlDbContext : DbContext, IApplicationDbContext
     {
+        public string ConnectionString { get; set; }
         public PgsqlDbContext(DbContextOptions<PgsqlDbContext> opts) : base(opts)
         {
             AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+            ConnectionString = this.Database.GetConnectionString() ?? "";
         }
 
         public DbSet<Cat> Cats => Set<Cat>();
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseNpgsql("Server=127.0.0.1;Port=5432;Database=CatDb;User Id=postgres;Password=password;");
 
         async Task IApplicationDbContext.SaveChangesAsync()
         {

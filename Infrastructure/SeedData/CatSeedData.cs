@@ -9,7 +9,7 @@ namespace CleanEjdg.Infrastructure.SeedData
     {
         public static void SeedDataBase(PgsqlDbContext context)
         {
-            context.Database.Migrate();
+            //context.Database.Migrate();
             if(context.Cats.Count() == 0)
             {
                 context.Cats.AddRange(
