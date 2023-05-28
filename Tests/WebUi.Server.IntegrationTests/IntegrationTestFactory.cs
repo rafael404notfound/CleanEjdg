@@ -41,15 +41,11 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
                 // Add Db context pointing to test container
                 services.AddDbContext<PgsqlDbContext>(opts =>
                 {
-                    string connectionString = _container.GetConnectionString();
                     opts.UseNpgsql(_container.GetConnectionString());
                 });
 
                 // Ensure schema gets created
                 services.EnsureDbCreated<PgsqlDbContext>();
-
-                // Set initial state
-                RestoreInitialState();
             });
         }
 
@@ -62,38 +58,21 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
             return new DbContextOptionsBuilder<PgsqlDbContext>().UseNpgsql(_container.GetConnectionString()).Options;
         }
 
-        public void RestoreInitialState()
+        public void SetDbInitialState(IEnumerable<Cat> cats)
         {
             var dbOptions = GetDbContextOptions();
 
             using (var context = new PgsqlDbContext(dbOptions))
             {
-                // Remove cats from db;
+                // Remove all cats from db
                 foreach(Cat c in context.Cats)
                 {
                     context.Remove(c);
                 }
                 context.SaveChanges();
-                
-                // Add seed data
-                context.Cats.AddRange(
-                    new Cat
-                    {
-                        Name = "Susan",
-                        DateOfBirth = new DateTime(2021, 2, 23),
-                        HasChip = true,
-                        IsSterilized = true,
-                        IsVaccinated = true
-                    },
-                    new Cat
-                    {
-                        Name = "Yuki",
-                        DateOfBirth = new DateTime(2022, 8, 15),
-                        HasChip = true,
-                        IsSterilized = true,
-                        IsVaccinated = false
-                    }
-                    );
+
+                // Store cats in db
+                context.Cats.AddRange(cats);
                 context.SaveChanges();
             }
         }

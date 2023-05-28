@@ -17,10 +17,11 @@ namespace CleanEjdg.Core.Application.Repositories
             await DbContext.SaveChangesAsync();
         }
 
+        // Returns false if an the entity didnt exist
         public async Task Delete(int id)
         {
             DbContext.Cats.Remove(new Cat { Id = id });
-            await DbContext.SaveChangesAsync();            
+            await DbContext.SaveChangesAsync();
         }
 
         public async Task<Cat> Get(int id)

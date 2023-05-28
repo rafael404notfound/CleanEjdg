@@ -22,7 +22,7 @@ namespace WebUI.Server.Controllers {
                 return Ok(Cats);
             } else
             {
-                return BadRequest();
+                return NotFound();
             }            
         }
 
@@ -42,27 +42,38 @@ namespace WebUI.Server.Controllers {
         [HttpPost]
         public async Task<IActionResult> SaveCat([FromBody]CatBindingTarget target)
         {        
-            if (!ModelState.IsValid)
-            {
-                return UnprocessableEntity(ModelState);
-            } else
-            {
-                Cat cat = target.ToCat();
-                await CatRepo.Create(cat);
-                return Ok(cat);
-            }            
+           
+            Cat cat = target.ToCat();
+            await CatRepo.Create(cat);
+            return Ok(cat);
+                        
         }
 
         [HttpDelete("{id}")]
-        public async Task DeleteCat(int id)
-        {            
-            await CatRepo.Delete(id);
+        public async Task<IActionResult> DeleteCat(int id)
+        {
+            try
+            {
+                await CatRepo.Delete(id);
+                return Ok();
+            }
+            catch
+            {
+                return NotFound();
+            }
         }
 
         [HttpPut]
-        public async Task UpdateCat([FromBody]Cat cat)
+        public async Task<IActionResult> UpdateCat([FromBody]Cat cat)
         {
-            await CatRepo.Update(cat);
+            try
+            {
+                await CatRepo.Update(cat);
+                return Ok(cat);
+            } catch
+            {
+                return NotFound();
+            }            
         }
     }
 }

@@ -12,17 +12,17 @@ namespace CleanEjdg.Core.Application.Services
         // Why does model binding validation only work when the property is nullable????
 
         [Required]
-        public string Name { get; set; } = string.Empty;
+        public virtual string Name { get; set; } = string.Empty;
         [Required]
-        public DateTime? DateOfBirth { get; set; }
+        public virtual DateTime? DateOfBirth { get; set; }
         [Required]
-        public bool? IsVaccinated { get; set; }
+        public virtual bool? IsVaccinated { get; set; }
         [Required]
-        public bool? HasChip { get; set; }
+        public virtual bool? HasChip { get; set; }
         [Required]
-        public bool IsSterilized { get; set; }
+        public virtual bool IsSterilized { get; set; }
 
-        public Cat ToCat() => new Cat()
+        public virtual Cat ToCat() => new Cat()
         {
             Name = this.Name,
             DateOfBirth = this.DateOfBirth ?? new DateTime(),
