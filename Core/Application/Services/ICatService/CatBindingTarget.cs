@@ -20,7 +20,7 @@ namespace CleanEjdg.Core.Application.Services
         [Required]
         public virtual bool? HasChip { get; set; }
         [Required]
-        public virtual bool IsSterilized { get; set; }
+        public virtual bool? IsSterilized { get; set; }
 
         public virtual Cat ToCat() => new Cat()
         {
@@ -28,7 +28,7 @@ namespace CleanEjdg.Core.Application.Services
             DateOfBirth = this.DateOfBirth ?? new DateTime(),
             IsVaccinated = this.IsVaccinated ?? false,
             HasChip = this.HasChip ?? false,
-            IsSterilized = this.IsSterilized,
+            IsSterilized = this.IsSterilized ?? false
         };
     }
 }

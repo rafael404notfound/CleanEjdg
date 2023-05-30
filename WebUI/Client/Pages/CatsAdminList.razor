@@ -1,0 +1,51 @@
+﻿@page "/admin/gatos"
+@inject HttpClient httpClient
+
+<MudTable Items="@Cats" Hover="true" LoadingProgressColor="Color.Info" Class="d-flex p-0 m-0">
+	<HeaderContent>
+		<MudTh class="col-1"></MudTh>
+		<MudTh class="text-center col-1">Nombre</MudTh>
+		<MudTh class="text-center col-1">Fecha De Nacimiento</MudTh>
+		<MudTh class="text-center col-1">Vacunado</MudTh>
+		<MudTh class="text-center col-1">Esterilizado</MudTh>
+		<MudTh class="text-center col-1">Chip</MudTh>
+		<MudTh class="col-6"></MudTh>
+	</HeaderContent>
+	<RowTemplate>
+		<MudTd DataLabel="" class="col-1">
+			<MudAvatar Rounded="true" class="m-0 mb-0">
+				<MudImage Src="@GetImgPath(context)" class="align-center m-0"></MudImage>
+			</MudAvatar>
+		</MudTd>
+		<MudTd DataLabel="Nombre" class="text-center col-1">@context.Name</MudTd>
+		<MudTd DataLabel="Fecha De Nacimiento" class="text-center col-1">@context.DateOfBirth.ToString("MM/yyyy")</MudTd>
+		<MudTd DataLabel="Vacunado" class="text-center col-1">
+			<MudIcon Icon=@(context.IsVaccinated == true ? "fa-solid fa-check" : "fa-solid fa-xmark") Color=@(context.IsVaccinated == true ? Color.Success : Color.Error)></MudIcon>
+		</MudTd>
+		<MudTd DataLabel="Esterilizado" class="text-center col-1">
+			<MudIcon Icon=@(context.IsSterilized == true ? "fa-solid fa-check" : "fa-solid fa-xmark") Color=@(context.IsSterilized == true ? Color.Success : Color.Error)></MudIcon>
+		</MudTd>
+		<MudTd DataLabel="Chip" class="text-center col-1">
+			<MudIcon Icon=@(context.HasChip == true ? "fa-solid fa-check" : "fa-solid fa-xmark") Color=@(context.HasChip == true ? Color.Success : Color.Error)></MudIcon>
+		</MudTd>
+		<MudTd class="col-6">
+			<MudButton Variant="Variant.Filled" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Search" Size="Size.Small">Detalles</MudButton>
+			<MudButton Variant="Variant.Filled" Color="Color.Warning" StartIcon="@Icons.Material.Filled.Edit" Size="Size.Small">Editar</MudButton>
+			<MudButton Variant="Variant.Filled" Color="Color.Error" StartIcon="@Icons.Material.Filled.Delete" Size="Size.Small">Borrar</MudButton>
+		</MudTd>
+	</RowTemplate>
+</MudTable>
+
+@code {
+	private IEnumerable<Cat> Cats = new List<Cat>();
+
+	protected override async Task OnInitializedAsync()
+	{
+		Cats = await httpClient.GetFromJsonAsync<List<Cat>>("api/Cats") ?? new List<Cat>();
+	}
+
+	private string GetImgPath(Cat cat)
+	{
+		return "images/2_1.jpg";
+	}
+}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WEbUi\\Shared\\WebUI.Shared.csproj": {}
+    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Shared\\WebUI.Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WEbUi\\Shared\\WebUI.Shared.csproj": {
+    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Shared\\WebUI.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WEbUi\\Shared\\WebUI.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Shared\\WebUI.Shared.csproj",
         "projectName": "WebUI.Shared",
-        "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WEbUi\\Shared\\WebUI.Shared.csproj",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Shared\\WebUI.Shared.csproj",
         "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WEbUi\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -28,7 +28,8 @@ builder.Services.AddDbContext<PgsqlDbContext>( opts =>
 });
 builder.Services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<PgsqlDbContext>());
 builder.Services.AddScoped<IRepositoryBase<Cat>, EFCatRepository>();
-builder.Services.AddScoped<IDateTime, DateTimeServer>();
+builder.Services.AddScoped<IDateTimeServer, DateTimeServer>();
+builder.Services.AddScoped<ICatService, CatService>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddSwaggerGen(c =>

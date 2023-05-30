@@ -19,7 +19,7 @@ namespace CleanEjdg.Tests.Application.UnitTests {
             var sut = new CatService(dateTimeMock.Object);
             
             //Act
-            IDictionary<string, int> result = sut.CatAge(cat);
+            IDictionary<string, int> result = sut.CalculateCatAge(cat);
             
             //Assert            
             Assert.Equal(expectedYears, result["Years"]);

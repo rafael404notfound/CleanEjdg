@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pw1y26U/1r55PCzecRLdu8KABIIwJJxzXuwe4nw35s35gjb7ZZPjdUity48sjHexBzOzLMfVecOGEl3derI1xw==",
+  "dgSpecHash": "qquABvepIgQWpA+vyFfGi0EBDBzzGyR0f3BuJwFH8gCMDB4Urble6MHD4KRvfP1IqHIyJkKWdjP0Obiur49GyA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\tests\\Domain.UnitTests\\Domain.UnitTests.csproj",
+  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\tests\\Domain.UnitTests\\Domain.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rafita\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",

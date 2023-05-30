@@ -9,9 +9,11 @@ namespace WebUI.Server.Controllers {
     [Route("api/[controller]")]
     public class CatsController : ControllerBase {
         IRepositoryBase<Cat> CatRepo;
+        IDateTimeServer DateTimeServer;
 
-        public CatsController(IRepositoryBase<Cat> catRepo) {
+        public CatsController(IRepositoryBase<Cat> catRepo, IDateTimeServer dateTimeServer) {
             CatRepo = catRepo;
+            DateTimeServer = dateTimeServer;
         }
 
         [HttpGet]
@@ -59,7 +61,7 @@ namespace WebUI.Server.Controllers {
             }
             catch
             {
-                return NotFound();
+                return NotFound(DateTimeServer.Now);
             }
         }
 

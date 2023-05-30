@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZXtCVdXq1OYXczS3H5UFUhUSdigYLIQCiV35bFyRABgAUT8V7I1/J9iHycs8CMZARvT96wgpr0vURtgPah8k4Q==",
+  "dgSpecHash": "R3lfXj24ytHUwWN9pG2eLiTOuc3nTuoc4xwndERH6H6VqsXflr6hui/5CQt5Tjlyc3U8zcvFLZqgp2RPc5HGaw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.5\\microsoft.entityframeworkcore.abstractions.7.0.5.nupkg.sha512",

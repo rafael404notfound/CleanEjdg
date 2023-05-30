@@ -1,6 +1,6 @@
 namespace CleanEjdg.Core.Application.Services {
     
-    public interface IDateTime {
+    public interface IDateTimeServer {
         DateTime Now { get; }
     }
 }

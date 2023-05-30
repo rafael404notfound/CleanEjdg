@@ -5,18 +5,29 @@
 
 @if (CatArray != null)
 {
-	<MudGrid Justify="Justify.Center">
+	<MudGrid Justify="Justify.FlexStart">
 		@foreach(var cat in CatArray)
 		{
-			<MudItem>
-				<MudCard>
-					<MudCardHeader>
-						<CardHeaderContent>
-							<MudText Typo="Typo.h6">@cat.Name</MudText>
-						</CardHeaderContent>
-					</MudCardHeader>
+			<MudItem xs="3">
+				<MudCard>			
+					<MudCarousel Class="mud-width-full rounded-top" Style="height:200px;" ShowArrows="true" ShowBullets="true" EnableSwipeGesture="true" AutoCycle="false" TData="object">
+						<MudCarouselItem Transition="Transition.Fade" Color="@Color.Primary">
+							<div class="d-flex" style="height:100%">
+								<MudImage src="images/1_1.jpg"></MudImage>
+							</div>							
+						</MudCarouselItem>
+						<MudCarouselItem Transition="Transition.Fade" Color="@Color.Secondary">
+							<div class="d-flex" style="height:100%">
+								<MudImage src="images/1_2.jpg"></MudImage>
+							</div>
+						</MudCarouselItem>
+					</MudCarousel>	
 					<MudCardContent>
-						<MudText>@cat.DateOfBirth.ToString()</MudText>
+						<MudText Typo="Typo.h6">@cat.Name</MudText>
+						<MudText>@(CatService?.CalculateCatAge(cat)["Years"].ToString()) años y @(CatService?.CalculateCatAge(cat)["Months"].ToString()) meses</MudText>
+						<MudText>@(cat.IsVaccinated == true ? "✅" : "❌") Vacunado</MudText>
+						<MudText>@(cat.IsSterilized == true ? "✅" : "❌") Esterilizado</MudText>
+						<MudText>@(cat.HasChip == true ? "✅" : "❌") Con chip</MudText>
 					</MudCardContent>
 				</MudCard>
 			</MudItem>
@@ -27,8 +38,13 @@
 
 
 @code {
+	[Inject]
+	public ICatService? CatService { get; set; }
 
-	private IEnumerable<Cat>? CatArray;
+	[Inject]
+	public IDateTimeServer? DateTimeServer { get; set; }
+
+	public IEnumerable<Cat>? CatArray;
 
 	protected override async Task OnInitializedAsync()
 	{
