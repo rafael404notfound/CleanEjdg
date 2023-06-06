@@ -8,7 +8,7 @@ namespace CleanEjdg.Tests.Application.UnitTests {
         public void CatAge_Method_Returns_Correct_Value(int expectedYears, int expectedMonths, int yearOfBirth, int monthOfBirth) {
             
             //Arrange
-            var dateTimeMock = new Mock<IDateTime>();
+            var dateTimeMock = new Mock<IDateTimeServer>();
             dateTimeMock.Setup(m => m.Now).Returns(new DateTime(2023, 5, 20));
 
             var cat = new Cat{

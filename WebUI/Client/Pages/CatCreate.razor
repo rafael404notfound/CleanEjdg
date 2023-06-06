@@ -1,0 +1,32 @@
+﻿@page "/admin/crear"
+@inject HttpClient httpClient
+@inject NavigationManager navManager
+
+<EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator/>    
+    <MudCard>
+        <MudCardContent>
+            <MudTextField Label="Nombre" HelperText="Max. 8 characters"
+                            @bind-Value="model.Name" For="@(() => model.Name)"/>
+            <MudDatePicker Label="Fecha de nacimiento" @bind-Date="model.DateOfBirth" For="@(() => model.DateOfBirth)"/>
+            <MudCheckBox Label="Esterilizado" @bind-Checked="@model.IsSterilized"></MudCheckBox>
+            <MudCheckBox Label="Con chip" @bind-Checked="@model.HasChip"></MudCheckBox>
+            <MudCheckBox Label="Vacunado" @bind-Checked="@model.IsVaccinated"></MudCheckBox>
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Crear</MudButton>
+        </MudCardActions>
+    </MudCard>    
+</EditForm>
+@code {
+    private CatBindingTarget model { get; set; } = new CatBindingTarget();
+    private Cat savedCat { get; set; } = new Cat();
+
+    private async Task OnValidSubmit(EditContext context)
+    {
+        var response = await httpClient.PostAsJsonAsync("api/Cats", model);
+        savedCat = await response.Content.ReadFromJsonAsync<Cat>() ?? new Cat();
+        navManager.NavigateTo("admin/gatos");
+    }
+
+}

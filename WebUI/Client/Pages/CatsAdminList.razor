@@ -1,6 +1,8 @@
 ﻿@page "/admin/gatos"
 @inject HttpClient httpClient
+@inject IDialogService DialogService
 
+<MudButton href="/admin/crear" Variant="Variant.Filled" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" Size="Size.Small">Crear</MudButton>
 <MudTable Items="@Cats" Hover="true" LoadingProgressColor="Color.Info" Class="d-flex p-0 m-0">
 	<HeaderContent>
 		<MudTh class="col-1"></MudTh>
@@ -31,7 +33,7 @@
 		<MudTd class="col-6">
 			<MudButton Variant="Variant.Filled" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Search" Size="Size.Small">Detalles</MudButton>
 			<MudButton Variant="Variant.Filled" Color="Color.Warning" StartIcon="@Icons.Material.Filled.Edit" Size="Size.Small">Editar</MudButton>
-			<MudButton Variant="Variant.Filled" Color="Color.Error" StartIcon="@Icons.Material.Filled.Delete" Size="Size.Small">Borrar</MudButton>
+			<MudButton @onclick="@(() => Delete(context.Id))" Variant="Variant.Filled" Color="Color.Error" StartIcon="@Icons.Material.Filled.Delete" Size="Size.Small">Borrar</MudButton>
 		</MudTd>
 	</RowTemplate>
 </MudTable>
@@ -42,6 +44,24 @@
 	protected override async Task OnInitializedAsync()
 	{
 		Cats = await httpClient.GetFromJsonAsync<List<Cat>>("api/Cats") ?? new List<Cat>();
+	}
+
+	private async Task Delete(int id) {
+		var parameters = new DialogParameters();
+		parameters.Add("ContentText", "Estas seguro de que quieres borrar este gato? Una vez borrado no podras recuperarlo.");
+		parameters.Add("ButtonText", "Borrar");
+		parameters.Add("Color", Color.Error);
+
+		var options = new DialogOptions() { CloseButton = true, MaxWidth = MaxWidth.ExtraSmall };
+
+		var dialog = DialogService.Show<Dialog>("Borrar", parameters, options);
+		DialogResult result = await dialog.Result;
+
+		if (!result.Canceled)
+		{
+			var response = await httpClient.DeleteAsync($"api/Cats/{id}");
+			Cats = await httpClient.GetFromJsonAsync<List<Cat>>("api/Cats") ?? new List<Cat>();
+		}
 	}
 
 	private string GetImgPath(Cat cat)
