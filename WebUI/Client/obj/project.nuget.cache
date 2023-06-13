@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bdthnKz8gMEtvPD7+GaGVZl52PPfabTm6B4oGZuJjtrQVueW/o9KcMBQCsSVQohlNMYzXcu8YS54uC3t9cIISA==",
+  "dgSpecHash": "1UfqWblPtrm2qa9+8DABvHtloPT/BuKuGC6ITSYpcxUEaM3VeFBetmeARwP3LgNkMnuLNC/YtXrlhCdLF0Z6Mg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\WebUI.Client.csproj",
+  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Client\\WebUI.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.16\\microsoft.aspnetcore.authorization.6.0.16.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.16\\microsoft.aspnetcore.components.6.0.16.nupkg.sha512",

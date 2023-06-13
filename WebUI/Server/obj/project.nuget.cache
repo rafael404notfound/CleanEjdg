@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wQ7HHUH37vRJr0NB4FMjtgW3ddcq/e07Vd58iURwbtTnkC7INil8clr//yavvtTYge4G4eUn7e2Ws4tTSZBVrw==",
+  "dgSpecHash": "YPVMMmkN91rZKIcpixeK+9Db+UvkhI+MUQtMOapE47x81R6oq5i5MsZNm68la/v/MigDn6Dbx2mwpwM9aw1v+A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\server\\WebUI.Server.csproj",
+  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Server\\WebUI.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rafita\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
