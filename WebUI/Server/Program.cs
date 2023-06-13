@@ -8,6 +8,10 @@ using CleanEjdg.Core.Application.Repositories;
 using CleanEjdg.Core.Application.Services;
 using Microsoft.OpenApi.Models;
 using CleanEjdg.Core.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,12 +30,32 @@ builder.Services.AddDbContext<PgsqlDbContext>( opts =>
     //opts.UseSqlServer(builder.Configuration["ConnectionStrings:CatsConnection"]);
     opts.EnableSensitiveDataLogging(true);
 });
+builder.Services.AddDbContext<IdentityContext>(opts => opts.UseNpgsql(builder.Configuration["ConnectionStrings:IdentityConnection"]));
+builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<IdentityContext>();
 builder.Services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<PgsqlDbContext>());
 builder.Services.AddScoped<IRepositoryBase<Cat>, EFCatRepository>();
+builder.Services.AddScoped<UserRepository>();
 builder.Services.AddScoped<IDateTimeServer, DateTimeServer>();
 builder.Services.AddScoped<ICatService, CatService>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services
+    .AddHttpContextAccessor()
+    .AddAuthorization()
+    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+        };
+    });
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Ejdg Api", Version = "v1" });
@@ -56,8 +80,11 @@ app.UseHttpsRedirection();
 app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 
+app.UseAuthentication();
+
 app.UseRouting();
 
+app.UseAuthorization();
 
 app.MapRazorPages();
 app.MapControllers();

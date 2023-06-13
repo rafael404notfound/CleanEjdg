@@ -2,10 +2,11 @@ using Microsoft.AspNetCore.Mvc;
 using CleanEjdg.Core.Application.Services;
 using CleanEjdg.Core.Domain.Entities;
 using CleanEjdg.Core.Application.Common;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebUI.Server.Controllers {
 
-    [ApiController]
+    [ApiController, Authorize]
     [Route("api/[controller]")]
     public class CatsController : ControllerBase {
         IRepositoryBase<Cat> CatRepo;

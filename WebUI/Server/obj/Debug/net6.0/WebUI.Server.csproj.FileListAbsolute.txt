@@ -114,3 +114,5 @@ C:\Users\Rafita\source\repos\cleanejdg\WebUi\Server\bin\Debug\net6.0\System.Text
 C:\Users\Rafita\source\repos\cleanejdg\WebUi\Server\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Rafita\source\repos\cleanejdg\WebUi\Server\bin\Debug\net6.0\Npgsql.dll
 C:\Users\Rafita\source\repos\cleanejdg\WebUi\Server\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Rafita\source\repos\CleanEjdg\webui\server\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Rafita\source\repos\cleanejdg\webui\server\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -48,6 +48,8 @@
 
 	protected override async Task OnInitializedAsync()
 	{
+		//string authToken = await LocalStorage.GetItemAsStringAsync("authToken")
+		//Http.DefaultRequestHeaders.Add("Authorization", $"Bearer {authToken}");
 		CatArray = await Http.GetFromJsonAsync<IEnumerable<Cat>>("api/cats");
 	}
 }

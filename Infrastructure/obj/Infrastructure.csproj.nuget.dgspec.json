@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\application\\Application.csproj": {
+    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\application\\Application.csproj",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\application\\obj\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj"
+              "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj"
               }
             }
           }
@@ -44,6 +44,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[7.0.4, )"
@@ -69,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj": {
+    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -104,6 +108,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -124,14 +134,14 @@
         }
       }
     },
-    "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Rafita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rafita\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -148,8 +158,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Application\\Application.csproj"
+              "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Application\\Application.csproj"
               }
             }
           }
@@ -164,6 +174,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.5, )"

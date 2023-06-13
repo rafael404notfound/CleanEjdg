@@ -1,0 +1,47 @@
+﻿@page "/admin/editar/{id:int}"
+@inject HttpClient httpClient
+@inject NavigationManager navManager
+
+<EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator/>    
+    <MudCard>
+        <MudCardContent>
+            <MudTextField Label="Nombre" HelperText="Max. 8 characters"
+                            @bind-Value="model.Name" For="@(() => model.Name)"/>
+            <MudDatePicker Label="Fecha de nacimiento" @bind-Date="model.DateOfBirth" For="@(() => model.DateOfBirth)"/>
+            <MudCheckBox Label="Esterilizado" @bind-Checked="@model.IsSterilized"></MudCheckBox>
+            <MudCheckBox Label="Con chip" @bind-Checked="@model.HasChip"></MudCheckBox>
+            <MudCheckBox Label="Vacunado" @bind-Checked="@model.IsVaccinated"></MudCheckBox>
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Guardar</MudButton>
+        </MudCardActions>
+    </MudCard>    
+</EditForm>
+@code {
+    private Cat cat { get; set; } = new Cat();
+    private CatBindingTarget model { get; set; } = new CatBindingTarget();
+    private Cat savedCat { get; set; } = new Cat();
+    [Parameter]
+    public int? Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        cat = await httpClient.GetFromJsonAsync<Cat>($"api/Cats/{Id}") ?? new Cat();
+        model.Name = cat.Name ?? "";
+        model.DateOfBirth = cat.DateOfBirth;
+        model.HasChip = cat.HasChip;
+        model.IsSterilized = cat.IsVaccinated;
+        model.IsSterilized = cat.IsSterilized;
+    }
+
+    private async Task OnValidSubmit(EditContext context)
+    {
+        savedCat = model.ToCat();
+        savedCat.Id = cat.Id;
+        var response = await httpClient.PutAsJsonAsync("api/Cats", savedCat);
+        var result = await response.Content.ReadFromJsonAsync<Cat>() ?? new Cat();
+        navManager.NavigateTo("admin/gatos");
+    }
+
+}
