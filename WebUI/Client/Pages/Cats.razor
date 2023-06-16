@@ -1,5 +1,6 @@
 ﻿@page "/Gatos"
 @inject HttpClient Http
+@inject JSRuntime jsr
 
 <PageTitle>Gatos</PageTitle>
 
@@ -48,8 +49,15 @@
 
 	protected override async Task OnInitializedAsync()
 	{
-		//string authToken = await LocalStorage.GetItemAsStringAsync("authToken")
-		//Http.DefaultRequestHeaders.Add("Authorization", $"Bearer {authToken}");
-		CatArray = await Http.GetFromJsonAsync<IEnumerable<Cat>>("api/cats");
+		string authToken = "";
+		var userdata = await jsr.InvokeAsync<string>("localstorage.getItem", "user").ConfigureAwait(false);
+		if (!string.IsNullOrWhiteSpace(userdata))
+		{
+			var dataArray = userdata.Split(';', 2);
+			if (dataArray.Length == 2)
+				 authToken = dataArray[1];
+		}
+		Http.DefaultRequestHeaders.Add("Authorization", $"Bearer {authToken}");
+		CatArray = await Http.GetFromJsonAsync<IEnumerable<Cat>>("/api/Cats");
 	}
 }

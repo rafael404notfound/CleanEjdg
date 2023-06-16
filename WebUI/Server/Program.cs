@@ -37,13 +37,7 @@ builder.Services.AddScoped<IRepositoryBase<Cat>, EFCatRepository>();
 builder.Services.AddScoped<UserRepository>();
 builder.Services.AddScoped<IDateTimeServer, DateTimeServer>();
 builder.Services.AddScoped<ICatService, CatService>();
-builder.Services.AddControllersWithViews();
-builder.Services.AddRazorPages();
-builder.Services
-    .AddHttpContextAccessor()
-    .AddAuthorization()
-    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
     {
         options.TokenValidationParameters = new TokenValidationParameters
         {
@@ -55,7 +49,18 @@ builder.Services
             ValidAudience = builder.Configuration["Jwt:Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
         };
+
+        /*options.Events.OnMessageReceived = context =>
+        {
+            if (context.Request.Cookies.ContainsKey("X-Access-Token"))
+            {
+                context.Token = context.Request.Cookies["X-Access-Token"];
+            }
+            return Task.CompletedTask;
+        };*/
     });
+builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Ejdg Api", Version = "v1" });

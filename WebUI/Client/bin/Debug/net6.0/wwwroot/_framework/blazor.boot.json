@@ -9,6 +9,7 @@
     "assembly": {
       "Microsoft.AspNetCore.Authorization.dll": "sha256-aDNthpcgReHLCzS5ZT\/PJDirLd6siorRIngHWOCUfd4=",
       "Microsoft.AspNetCore.Components.dll": "sha256-QuQEF2UMucn5Vmy5DaA1xMY5DutdB0QhPYbnza2JJJ0=",
+      "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-xbEcMmsZVcvk5fX+1SeXPguS4wF3qoU0hqW3MlQa6O0=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-PCqolrqn+eWfQ\/KIakpqOwLmo9t9cThQzzpZ7dr+SjA=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-HJq4+3Qg5eiYk\/JyTPmtr2NFJz+E9+HhSyddNQaPGoI=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-Vq9zvYcuIlv6Fbw3WnkV+If5lwew8YbaFwkDYYfjNGA=",
@@ -209,19 +210,19 @@
       "mscorlib.dll": "sha256-C3gpWQMELcHYfrHU\/1agQUvWTtSNs9Ul2suMxcKFnIc=",
       "netstandard.dll": "sha256-CgGkoZQx73t3qchcsu85kgBcgrjNEOiudArOwKNb18k=",
       "System.Private.CoreLib.dll": "sha256-6nUSjiT7okMlkN897OnDypwppYuK7JxTahOClXkAuwE=",
-      "Application.dll": "sha256-L16oLN\/lMoEUpg1lEc+Q\/NvNygeTJEOjFud\/ilNx9ew=",
-      "Domain.dll": "sha256-MVeh13eMyek9tUUCqGDkKO9OAvN4Xq\/k4bzpv0MCXYc=",
+      "Application.dll": "sha256-kCad4Qw\/tNklpDnCouW5cvCdVSzAtPBqPCSjuVHTyBU=",
+      "Domain.dll": "sha256-FVzQsxhXp+IvaLvjrGenxp\/r9fw1hg8of8VjcFJGyac=",
       "WebUI.Shared.dll": "sha256-Yk132GwfiZglkswWv7oWkf2+w3sz0mms7o8R6\/BP4Mg=",
-      "WebUI.Client.dll": "sha256-Ns3HPMpD3BCOIhyA24wP5wYOH6qYONnTSKSC\/guI4cs="
+      "WebUI.Client.dll": "sha256-u47xGMvEESEha6rC9fBg0QS6P1r6NQhwMqpqlmgI65Y="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "Application.pdb": "sha256-Fxm9vZpnqfRjN8+cEte+NSDmbVU3pdhUXjvMhXSOoAw=",
+      "Application.pdb": "sha256-+xbao0SBxKMwHpmvYoQUkpNnEMZLAoIq9Dy0YeoLVI0=",
       "WebUI.Shared.pdb": "sha256-AJApym1BsEzDaYgc2jI3QfALau5MZMKdQv5V7JGDd\/s=",
-      "Domain.pdb": "sha256-FHZdWbyb3VjshObmphV0PhjOLR02Q+36RM5UKDTo7CI=",
-      "WebUI.Client.pdb": "sha256-fZ3GQXDmBraWC5O5frQrg\/wkK+u5AzZyPna2P1\/hmtc="
+      "Domain.pdb": "sha256-NStlGmD6DCZtNFwJa0aP0tODRbtXSqsgK8HYuKTOEEE=",
+      "WebUI.Client.pdb": "sha256-dIwT2HL0DcwPNmOBWtnCMH+qqo\/o+NLgBhEwFaxoOuc="
     },
     "runtime": {
       "dotnet.6.0.16.478dnqtj6j.js": "sha256-GT2gK+GjOisRXJY+9yh6H8s6K\/KDIsaFMFIgWvAnttY=",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s8Ac0fQAcWKqaEuILjwScUVhL3mCyqMUgUzVz5pCvZdxg4t2lNj6NEVrFbJCquALcsqNYZIjqXAYzi1B4MM/jA==",
+  "dgSpecHash": "ZVa4nEz/LPlC/lCxLOCdo2njXNQLRkxVpO9Xc7QvF6Vi37wQODWNvsBIhM3RZpKNchH8UWBUVb3pvoongRyZvQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0\\microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.0\\microsoft.aspnetcore.cryptography.keyderivation.6.0.0.nupkg.sha512",

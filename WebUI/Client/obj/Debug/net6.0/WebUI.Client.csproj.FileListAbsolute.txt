@@ -881,6 +881,10 @@ C:\Users\Rafita\source\repos\cleanejdg\webui\Client\obj\Debug\net6.0\build-gz\kN
 C:\Users\Rafita\source\repos\cleanejdg\webui\Client\obj\Debug\net6.0\build-gz\MNT7ij8x.gz
 C:\Users\Rafita\source\repos\cleanejdg\webui\Client\obj\Debug\net6.0\build-gz\rh7YSc+R.gz
 C:\Users\Rafita\source\repos\cleanejdg\webui\Client\obj\Debug\net6.0\build-gz\pVh7y+G2.gz
+C:\Users\Rafita\source\repos\cleanejdg\webui\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\Rafita\source\repos\cleanejdg\webui\Client\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll.gz
+C:\Users\Rafita\source\repos\cleanejdg\webui\Client\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\Rafita\source\repos\cleanejdg\webui\Client\obj\Debug\net6.0\build-gz\OZlYEfdp.gz
 C:\Users\Rafita\source\repos\cleanejdg\webui\Client\obj\Debug\net6.0\build-gz\DiSLU0hJ.gz
 C:\Users\Rafita\source\repos\cleanejdg\webui\Client\obj\Debug\net6.0\build-gz\mT+c9bmg.gz
 C:\Users\Rafita\source\repos\cleanejdg\webui\Client\obj\Debug\net6.0\build-gz\hlJS3ZB5.gz

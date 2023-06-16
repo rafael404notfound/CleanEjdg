@@ -3,10 +3,11 @@ using CleanEjdg.Core.Application.Services;
 using CleanEjdg.Core.Domain.Entities;
 using CleanEjdg.Core.Application.Common;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace WebUI.Server.Controllers {
 
-    [ApiController, Authorize]
+    [ApiController]
     [Route("api/[controller]")]
     public class CatsController : ControllerBase {
         IRepositoryBase<Cat> CatRepo;
@@ -30,6 +31,7 @@ namespace WebUI.Server.Controllers {
         }
 
         [HttpGet("{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> GetCat(int id)
         {
             Cat cat = await CatRepo.Get(id);

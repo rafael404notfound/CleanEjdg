@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace CleanEjdg.Core.Domain.ValueTypes
 {
-    public class LoginModel
+    public class LoginResult
     {
-        public string message { get; set; } = String.Empty;
-        public string email { get; set; } = String.Empty;
-        public string jwtBearer { get; set; } = String.Empty;
-        public bool success { get; set; }
+        public string Message { get; set; } = String.Empty;
+        public string Email { get; set; } = String.Empty;
+        public string JwtBearer { get; set; } = String.Empty;
+        public bool Success { get; set; } = false;
     }
 }

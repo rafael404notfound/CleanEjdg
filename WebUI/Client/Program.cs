@@ -13,4 +13,5 @@ builder.Services.AddScoped<ICatService, CatService>();
 builder.Services.AddScoped<IDateTimeServer, DateTimeServer>();
 builder.Services.AddMudServices();
 
+
 await builder.Build().RunAsync();

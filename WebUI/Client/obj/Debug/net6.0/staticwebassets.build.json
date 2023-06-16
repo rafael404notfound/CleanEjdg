@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rTuMkdUuFiDxDLqor+Nutz4BS9Wr8eL8Y7maE5A4MmY=",
+  "Hash": "DT63V4ZwzPBX69G7sZPLug3LvRGnELIK/m1GwwCESls=",
   "Source": "WebUI.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -287,6 +287,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.16\\lib\\net6.0\\Microsoft.AspNetCore.Authorization.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll",
+      "SourceId": "WebUI.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\6.0.0\\lib\\net6.0\\Microsoft.AspNetCore.Components.Authorization.dll"
     },
     {
       "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
@@ -6118,6 +6135,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Threading.Tasks.Dataflow.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\obj\\Debug\\net6.0\\build-gz\\OZlYEfdp.gz",
+      "SourceId": "WebUI.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.dll"
     },
     {
       "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\obj\\Debug\\net6.0\\build-gz\\p+vDWiei.gz",

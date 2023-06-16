@@ -121,3 +121,8 @@ C:\Users\Rafita\source\repos\cleanejdg\tests\Application.UnitTests\bin\Debug\net
 C:\Users\Rafita\source\repos\cleanejdg\tests\Application.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 C:\Users\Rafita\source\repos\CleanEjdg\tests\Application.UnitTests\bin\Debug\net6.0\Npgsql.dll
 C:\Users\Rafita\source\repos\CleanEjdg\tests\Application.UnitTests\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Rafita\source\repos\CleanEjdg\tests\Application.UnitTests\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Rafita\source\repos\CleanEjdg\tests\Application.UnitTests\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Rafita\source\repos\CleanEjdg\tests\Application.UnitTests\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Rafita\source\repos\CleanEjdg\tests\Application.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Rafita\source\repos\CleanEjdg\tests\Application.UnitTests\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll

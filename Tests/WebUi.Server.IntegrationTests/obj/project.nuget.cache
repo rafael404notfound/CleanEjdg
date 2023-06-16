@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yN1gMTHBC5zB3KVIBUnYRplUeOBw5NYTpVbkm6sCH7yyxSLOtcmxOeOp4C0V4VYs/abagW38nevZVtgGnqzNpQ==",
+  "dgSpecHash": "EBSfr+02k6J+lZYqFRuwXDQHpmg94WevpKPfVBkvGUD+hNjAVcno4fgXT/+M9vNunFPKyHyG2v+nZ6OPcITiYw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\tests\\WebUI.Server.IntegrationTests\\WebUi.Server.IntegrationTests.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.16\\microsoft.aspnetcore.authorization.6.0.16.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.16\\microsoft.aspnetcore.components.6.0.16.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.16\\microsoft.aspnetcore.components.analyzers.6.0.16.nupkg.sha512",
+    "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\6.0.0\\microsoft.aspnetcore.components.authorization.6.0.0.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\6.0.16\\microsoft.aspnetcore.components.forms.6.0.16.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.aspnetcore.components.web\\6.0.16\\microsoft.aspnetcore.components.web.6.0.16.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.16\\microsoft.aspnetcore.components.webassembly.6.0.16.nupkg.sha512",

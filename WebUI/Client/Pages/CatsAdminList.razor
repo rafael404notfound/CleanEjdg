@@ -1,6 +1,7 @@
 ﻿@page "/admin/gatos"
 @inject HttpClient httpClient
 @inject IDialogService DialogService
+@attribute [Authorize]
 
 <MudButton href="/admin/crear" Variant="Variant.Filled" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Add" Size="Size.Small">Crear</MudButton>
 <MudTable Items="@Cats" Hover="true" LoadingProgressColor="Color.Info" Class="d-flex p-0 m-0">
