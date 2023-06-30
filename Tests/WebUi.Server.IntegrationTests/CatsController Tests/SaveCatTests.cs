@@ -67,7 +67,7 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
         {
             // Arrange
             var client = _factory.CreateClient();
-            _factory.SetDbInitialState(TestCats);
+            await _factory.SetDbInitialState(TestCats);
             CatBindingTarget requestCat = new CatBindingTarget()
             {
                 Name = "TestCat",
@@ -100,7 +100,7 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
         {
             // Arrange
             var client = _factory.CreateClient();
-            _factory.SetDbInitialState(TestCats);
+            await _factory.SetDbInitialState(TestCats);
             CatBindingTarget requestCat = new CatBindingTarget()
             {
                 Name = "TestCat",
@@ -123,7 +123,7 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
         {
             // Arrange
             var client = _factory.CreateClient();
-            _factory.SetDbInitialState(TestCats);
+            await _factory.SetDbInitialState(TestCats);
             CatBindingTarget requestCat = new CatBindingTarget()
             {
                 Name = "TestCat"
@@ -142,7 +142,7 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
         {
             // Arrange
             var client = _factory.CreateClient();
-            _factory.SetDbInitialState(TestCats);
+            await _factory.SetDbInitialState(TestCats);
             CatBindingTarget requestCat = new CatBindingTarget()
             {
                 Name = "TestCat"

@@ -37,7 +37,26 @@ builder.Services.AddScoped<IRepositoryBase<Cat>, EFCatRepository>();
 builder.Services.AddScoped<UserRepository>();
 builder.Services.AddScoped<IDateTimeServer, DateTimeServer>();
 builder.Services.AddScoped<ICatService, CatService>();
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"])),
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        RequireExpirationTime = false,
+        ValidateLifetime = true
+    };
+});
+/*builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
     {
         options.TokenValidationParameters = new TokenValidationParameters
         {
@@ -57,8 +76,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
                 context.Token = context.Request.Cookies["X-Access-Token"];
             }
             return Task.CompletedTask;
-        };*/
-    });
+        };
+    });*/
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddSwaggerGen(c =>
@@ -101,8 +120,11 @@ app.UseSwaggerUI(opts =>
     opts.SwaggerEndpoint("/swagger/v1/swagger.json", "Ejdg Api");
 });
 
-//var applicationDbContext = app.Services.CreateScope().ServiceProvider.GetRequiredService<PgsqlDbContext>();
+var roleManager = app.Services.CreateScope().ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+var userManager = app.Services.CreateScope().ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+await RoleSeedData.SeedDataBase(roleManager, userManager);
 //CatSeedData.SeedDataBase(applicationDbContext);
+
 
 app.Run();
 

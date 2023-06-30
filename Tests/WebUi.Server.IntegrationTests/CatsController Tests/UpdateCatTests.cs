@@ -40,7 +40,7 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
         {
             // Arrange
             var client = _factory.CreateClient();
-            _factory.SetDbInitialState(TestCats);
+            await _factory.SetDbInitialState(TestCats);
             var requestCat = new Cat()
             {
                 Id = 1,
@@ -64,7 +64,7 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
         {
             // Arrange
             var client = _factory.CreateClient();
-            _factory.SetDbInitialState(TestCats);
+            await _factory.SetDbInitialState(TestCats);
             var requestCat = new Cat()
             {
                 Id = 3,
@@ -88,7 +88,7 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
         {
             // Arrange
             var client = _factory.CreateClient();
-            _factory.SetDbInitialState(TestCats);
+            await _factory.SetDbInitialState(TestCats);
             var requestCat = new Cat()
             {
                 Id = 1,
@@ -118,7 +118,7 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
         {
             // Arrange
             var client = _factory.CreateClient();
-            _factory.SetDbInitialState(TestCats);
+            await _factory.SetDbInitialState(TestCats);
             var requestCat = new Cat()
             {
                 Id = 1,

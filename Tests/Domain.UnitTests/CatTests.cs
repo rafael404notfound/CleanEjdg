@@ -1,6 +1,6 @@
 namespace CleanEjdg.Tests.Domain.UnitTests {
     
-    public class CatTests {
+    //public class CatTests {
         /* *****NO LONGER NEEDED BEACAUSE AGE IS NOW CALCULATED THROUGH CATSERVICE*****
         
         [Theory]
@@ -22,5 +22,5 @@ namespace CleanEjdg.Tests.Domain.UnitTests {
             Assert.Equal(expectedYears, result["Years"]);
             Assert.Equal(expectedMonths, result["Months"]);
         }*/
-    }
+    //}
 }

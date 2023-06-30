@@ -1,0 +1,11 @@
+﻿@page "/logout"
+@inject IJSRuntime jsr
+
+<h4>You have logged out</h4>
+
+@code {
+	protected override async Task OnInitializedAsync()
+	{
+		await jsr.InvokeVoidAsync("localStorage.removeItem", "user");
+	}
+}

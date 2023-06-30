@@ -31,7 +31,6 @@ namespace WebUI.Server.Controllers {
         }
 
         [HttpGet("{id}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> GetCat(int id)
         {
             Cat cat = await CatRepo.Get(id);
@@ -45,6 +44,7 @@ namespace WebUI.Server.Controllers {
         }
 
         [HttpPost]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> SaveCat([FromBody]CatBindingTarget target)
         {        
            

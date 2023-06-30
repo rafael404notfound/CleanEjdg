@@ -40,7 +40,7 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
         {
             // Arrange
             var client = _factory.CreateClient();
-            _factory.SetDbInitialState(TestCats);
+            await _factory.SetDbInitialState(TestCats);
 
             // Act
             var response = await client.GetAsync("api/Cats/1");
@@ -54,7 +54,7 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
         {
             // Arrange
             var client = _factory.CreateClient();
-            _factory.SetDbInitialState(TestCats);
+            await _factory.SetDbInitialState(TestCats);
 
             // Act
             var response = await client.GetAsync("api/Cats/1");
@@ -69,7 +69,7 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
         {
             // Arrange
             var client = _factory.CreateClient();
-            _factory.SetDbInitialState(TestCats);
+            await _factory.SetDbInitialState(TestCats);
 
             // Act
             var response = await client.GetAsync("api/Cats/3");

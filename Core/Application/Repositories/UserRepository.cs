@@ -27,7 +27,7 @@ namespace CleanEjdg.Core.Application.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<UserCredentials> Get(int id)
+        public Task<UserCredentials> GetByEmail(string email)
         {
             throw new NotImplementedException();
         }

@@ -3,7 +3,12 @@
 @inject IJSRuntime jsr
 @inject NavigationManager navManager
 
-<EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+@if(IsLoggedIn)
+{
+    <h4>Ya hay una session de usuario iniciada</h4>
+} else
+{
+    <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
     <DataAnnotationsValidator/>
     <MudText>@(PrintLoginError())</MudText>
     <ValidationSummary></ValidationSummary>
@@ -22,13 +27,17 @@
     </MudCard>    
 </EditForm>
 
-@code {
+}
+
+    @code {
     private UserCredentials model { get; set; } = new UserCredentials();
     private bool WrongCredentials;
+    private bool IsLoggedIn { get; set; }
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         WrongCredentials = false;
+        IsLoggedIn = await CheckIfLoggedIn();
     }
 
     private async Task OnValidSubmit()
@@ -56,5 +65,10 @@
             return "InvalidCredential";
         }
         return "";
+    }
+
+    public async Task<bool> CheckIfLoggedIn(){
+        var userdata = await jsr.InvokeAsync<string>("localStorage.getItem", "user");
+        return !string.IsNullOrWhiteSpace(userdata);
     }
 }

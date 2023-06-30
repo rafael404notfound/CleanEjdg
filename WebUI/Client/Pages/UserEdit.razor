@@ -1,0 +1,62 @@
+﻿@page "/admin/usuario/{Id}"
+@inject HttpClient httpClient
+@inject NavigationManager navManager
+@inject IJSRuntime jsr
+@inject ITokenService tokenService
+
+@if (IsAuthorized)
+{
+    <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator/>    
+    <MudCard>
+        <MudCardContent>
+            <MudText>@model.UserName</MudText>
+            <MudText>@model.Email</MudText>            
+            <MudCheckBox Label="Editor de gatos" @bind-Checked="@modelIsCatEditor"></MudCheckBox>
+            <MudCheckBox Label="Editor de productos" @bind-Checked="@modelIsItemEditor"></MudCheckBox>
+            <MudCheckBox Label="Editor de pedidos" @bind-Checked="@modelIsOrderEditor"></MudCheckBox>
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Guardar</MudButton>
+        </MudCardActions>
+    </MudCard>    
+    </EditForm>
+} else
+{
+    <h4>No tienes los permisos necesarios para ver esta pagina</h4>
+}
+@code {
+    private string[] roles = { "CatEditor", "ItemEditor", "OrderEditor" };
+    private UserDto model { get; set; } = new UserDto();
+
+    [Parameter]
+    public string? Id { get; set; }
+    private string token { get; set; } = "";
+    private bool IsAuthorized { get; set; } = false;
+    bool modelIsCatEditor { get; set; }
+    bool modelIsItemEditor { get; set; }
+    bool modelIsOrderEditor { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        token = await tokenService.GetToken();
+        var userRoles = await httpClient.GetFromJsonAsync<List<string>>($"api/auth/roles?token={token}") ?? new List<string>();
+        if (userRoles.Contains("Admin")) IsAuthorized = true;
+
+        model = await httpClient.GetFromJsonAsync<UserDto>($"api/auth/{Id}") ?? new UserDto();
+        modelIsCatEditor = model.Roles.Contains("CatEditor");
+        modelIsItemEditor = model.Roles.Contains("ItemEditor");
+        modelIsOrderEditor = model.Roles.Contains("OrderEditor");
+    }
+
+    private async Task OnValidSubmit(EditContext context)
+    {
+        model.Roles = new List<string>();
+        if (modelIsCatEditor) model.Roles.Add("CatEditor"); 
+        if (modelIsItemEditor) model.Roles.Add("ItemEditor");
+        if (modelIsOrderEditor) model.Roles.Add("OrderEditor");
+        var response = await httpClient.PutAsJsonAsync($"api/auth", model);
+        navManager.NavigateTo("admin/usuarios");
+    }
+
+}

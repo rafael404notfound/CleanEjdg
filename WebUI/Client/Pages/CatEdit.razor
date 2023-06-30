@@ -1,6 +1,7 @@
 ﻿@page "/admin/editar/{id:int}"
 @inject HttpClient httpClient
 @inject NavigationManager navManager
+@inject IJSRuntime jsr
 
 <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
     <DataAnnotationsValidator/>    
@@ -24,10 +25,28 @@
     private Cat savedCat { get; set; } = new Cat();
     [Parameter]
     public int? Id { get; set; }
+    private string token { get; set; } = "";
 
     protected override async Task OnInitializedAsync()
     {
-        cat = await httpClient.GetFromJsonAsync<Cat>($"api/Cats/{Id}") ?? new Cat();
+        var userdata = await jsr.InvokeAsync<string>("localStorage.getItem", "user").ConfigureAwait(false);
+        if (!string.IsNullOrWhiteSpace(userdata))
+        {
+            var dataArray = userdata.Split(';', 2);
+            if (dataArray.Length == 2)
+            {
+                token = dataArray[1]; 
+            }
+        }
+        //cat = await httpClient.GetFromJsonAsync<Cat>($"api/Cats/{Id}") ?? new Cat();
+
+        var requestMessage = new HttpRequestMessage(HttpMethod.Get, $"/api/cats/{Id}");
+        requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+        var response = await httpClient.SendAsync(requestMessage);
+        if (response.IsSuccessStatusCode)
+        {
+            cat = await response.Content.ReadFromJsonAsync<Cat>() ?? new Cat();
+        }
         model.Name = cat.Name ?? "";
         model.DateOfBirth = cat.DateOfBirth;
         model.HasChip = cat.HasChip;

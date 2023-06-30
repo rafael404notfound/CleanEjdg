@@ -1,0 +1,96 @@
+﻿@page "/admin/usuarios"
+@inject HttpClient httpClient
+@inject IDialogService DialogService
+@inject IJSRuntime jsr
+
+@if (IsAuthorized)
+{
+	<MudTable Items="@Users" Hover="true" LoadingProgressColor="Color.Info" Class="d-flex p-0 m-0">
+	<HeaderContent>
+		<MudTh class="text-center">Nombre</MudTh>
+		<MudTh class="text-center">Email</MudTh>
+		<MudTh class="text-center">Editor de Gatos</MudTh>
+		<MudTh class="text-center">Editor de Productos</MudTh>
+		<MudTh class="text-center">Editor de Pedidos</MudTh>
+		<MudTh></MudTh>
+	</HeaderContent>
+	<RowTemplate>		
+		<MudTd DataLabel="Nombre" class="text-center">@context.UserName</MudTd>
+		<MudTd DataLabel="Email" class="text-center">@context.Email</MudTd>
+		<MudTd DataLabel="Editor de Gatos" class="text-center">
+			<MudIcon Icon=@(context.Roles.Contains("CatEditor") ? "fa-solid fa-check" : "fa-solid fa-xmark") Color=@(context.Roles.Contains("CatEditor") ? Color.Success : Color.Error)></MudIcon>
+		</MudTd>
+		<MudTd DataLabel="Editor de Productos" class="text-center">
+			<MudIcon Icon=@(context.Roles.Contains("ItemEditor") ? "fa-solid fa-check" : "fa-solid fa-xmark") Color=@(context.Roles.Contains("ItemEditor") ? Color.Success : Color.Error)></MudIcon>
+		</MudTd>
+		<MudTd DataLabel="Editor de Pedidos" class="text-center col-1">
+			<MudIcon Icon=@(context.Roles.Contains("OrderEditor")? "fa-solid fa-check" : "fa-solid fa-xmark") Color=@(context.Roles.Contains("OrderEditor") ? Color.Success : Color.Error)></MudIcon>
+		</MudTd>
+		<MudTd>
+			<MudButton Href=@($"/admin/usuario/{context.Id}") Variant="Variant.Filled" Color="Color.Warning" StartIcon="@Icons.Material.Filled.Edit" Size="Size.Small">Editar</MudButton>			
+		</MudTd>
+	</RowTemplate>
+	</MudTable>
+} else
+{
+	<h4>You do not have the necessary role permisions to see use this page</h4>
+}
+
+@code {
+	private IEnumerable<UserDto>Users = new List<UserDto>();
+	private bool IsAuthorized { get; set; } = false;
+
+	protected override async Task OnInitializedAsync()
+	{
+		// Get users list through API
+		Users = (await httpClient.GetFromJsonAsync<List<UserDto>>("api/auth") ?? new List<UserDto>()).OrderBy(u => u.UserName).ToList();
+
+		// Get JWT token from LocalStorage
+		var token = await jsr.InvokeAsync<string>("localStorage.getItem", "user").ConfigureAwait(false);
+		if (!string.IsNullOrWhiteSpace(token))
+		{
+			var dataArray = token.Split(';', 2);
+			if (dataArray.Length == 2)
+			{
+				token = dataArray[1]; 
+			}
+		}
+		// Get roles from token through API
+		//var response = await httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Post, "api/auth/roles") { Content = new StringContent(token) });
+		//var roles = await response.Content.ReadFromJsonAsync<string[]>() ?? new string[1];
+		// Authorize if token contains Admin role
+		try
+		{
+			var roles = await httpClient.GetFromJsonAsync<List<string>>($"api/auth/roles?token={token}") ?? new List<string>();
+			if (roles.Contains("Admin")) IsAuthorized = true;
+		} catch
+		{
+			
+		}
+	}
+
+
+
+	/*private async Task Delete(int id) {
+		var parameters = new DialogParameters();
+		parameters.Add("ContentText", "Estas seguro de que quieres borrar este gato? Una vez borrado no podras recuperarlo.");
+		parameters.Add("ButtonText", "Borrar");
+		parameters.Add("Color", Color.Error);
+
+		var options = new DialogOptions() { CloseButton = true, MaxWidth = MaxWidth.ExtraSmall };
+
+		var dialog = DialogService.Show<Dialog>("Borrar", parameters, options);
+		DialogResult result = await dialog.Result;
+
+		if (!result.Canceled)
+		{
+			var response = await httpClient.DeleteAsync($"api/Cats/{id}");
+			Cats = await httpClient.GetFromJsonAsync<List<Cat>>("api/Cats") ?? new List<Cat>();
+		}
+	}
+
+	private string GetImgPath(Cat cat)
+	{
+		return "images/2_1.jpg";
+	}*/
+}

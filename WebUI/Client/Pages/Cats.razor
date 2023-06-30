@@ -1,6 +1,6 @@
 ﻿@page "/Gatos"
 @inject HttpClient Http
-@inject JSRuntime jsr
+@inject IJSRuntime jsr
 
 <PageTitle>Gatos</PageTitle>
 
@@ -50,7 +50,7 @@
 	protected override async Task OnInitializedAsync()
 	{
 		string authToken = "";
-		var userdata = await jsr.InvokeAsync<string>("localstorage.getItem", "user").ConfigureAwait(false);
+		var userdata = await jsr.InvokeAsync<string>("localStorage.getItem", "user").ConfigureAwait(false);
 		if (!string.IsNullOrWhiteSpace(userdata))
 		{
 			var dataArray = userdata.Split(';', 2);

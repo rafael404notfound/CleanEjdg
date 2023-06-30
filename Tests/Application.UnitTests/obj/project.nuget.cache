@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PP52OhVxvAjrLNYmNCgjZ1+Ia6A2cYTiAYtWA7PRwNDcx0LIAJRQk3eQGt5NQdTVtmjJSOP4dBxsTlLP+wpQrw==",
+  "dgSpecHash": "yBo9kljR1UxFL7gtYBD1N3+sul/4ZSyDUbqYWbfx3DLLeKm68PGFOoLKfYqWT6/LLRkIKlEVrxvq2zlmaJcWZw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\tests\\Application.UnitTests\\Application.UnitTests.csproj",
   "expectedPackageFiles": [
@@ -26,6 +26,7 @@
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.jsinterop\\6.0.0\\microsoft.jsinterop.6.0.0.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.net.test.sdk\\17.1.0\\microsoft.net.test.sdk.17.1.0.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
