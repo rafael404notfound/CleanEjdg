@@ -19,16 +19,16 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
             {
                 Id = 1,
                 Name = "Susan",
-                DateOfBirth = new DateTime(2021, 2, 23),
+                DateOfBirth = DateTime.SpecifyKind( new DateTime(2021, 2, 23), DateTimeKind.Utc),
                 HasChip = true,
                 IsSterilized = true,
-                IsVaccinated = true
+                IsVaccinated = true,
             },
             new Cat
             {
                 Id = 2,
                 Name = "Yuki",
-                DateOfBirth = new DateTime(2022, 8, 15),
+                DateOfBirth =  DateTime.SpecifyKind( new DateTime(2022, 8, 15), DateTimeKind.Utc),
                 HasChip = true,
                 IsSterilized = true,
                 IsVaccinated = false
@@ -60,7 +60,7 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
             var response = await client.DeleteAsync("api/Cats/1");
 
             // Assert
-            var dbOptions = _factory.GetDbContextOptions();
+            var dbOptions = _factory.GetDbContextOptions<PgsqlDbContext>();
             var context = new PgsqlDbContext(dbOptions);
             var result = context.Cats.ToList();
 

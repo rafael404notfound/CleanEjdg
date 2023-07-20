@@ -499,3 +499,4 @@ C:\Users\Rafita\source\repos\CleanEjdg\tests\WebUI.Server.IntegrationTests\bin\D
 C:\Users\Rafita\source\repos\CleanEjdg\tests\WebUI.Server.IntegrationTests\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
 C:\Users\Rafita\source\repos\CleanEjdg\tests\WebUI.Server.IntegrationTests\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Rafita\source\repos\CleanEjdg\tests\WebUI.Server.IntegrationTests\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Rafita\source\repos\CleanEjdg\tests\WebUI.Server.IntegrationTests\bin\Debug\net6.0\SixLabors.ImageSharp.dll

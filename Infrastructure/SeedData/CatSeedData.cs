@@ -7,25 +7,29 @@ namespace CleanEjdg.Infrastructure.SeedData
 {
     public static class CatSeedData
     {
-        public static void SeedDataBase(PgsqlDbContext context)
+        public static void SeedDataBase(IApplicationDbContext context)
         {
             //context.Database.Migrate();
-            if(context.Cats.Count() == 0)
+            var date1 = new DateTime(2021, 2, 23);
+            DateTime.SpecifyKind(date1, DateTimeKind.Utc);
+            if (context.Cats.Count() == 0)
             {
                 context.Cats.AddRange(
-                    new Cat { 
-                        Name = "Susan", 
-                        DateOfBirth = new DateTime(2021, 2, 23),
+                    new Cat
+                    {
+                        Name = "Susan",
+                        DateOfBirth = DateTime.SpecifyKind(new DateTime(2021, 2, 23), DateTimeKind.Utc),
                         HasChip = true,
                         IsSterilized = true,
-                        IsVaccinated = true
+                        IsVaccinated = true,
                     },
-                    new Cat { 
-                        Name = "Yuki", 
-                        DateOfBirth = new DateTime(2022, 8, 15),
+                    new Cat
+                    {
+                        Name = "Yuki",
+                        DateOfBirth = DateTime.SpecifyKind(new DateTime(2022, 8, 15), DateTimeKind.Utc),
                         HasChip = true,
                         IsSterilized = true,
-                        IsVaccinated = false
+                        IsVaccinated = false,
                     }
                     );
                 context.SaveChanges();

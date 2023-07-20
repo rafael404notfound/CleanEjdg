@@ -44,9 +44,9 @@ namespace WebUI.Server.Controllers {
         }
 
         [HttpPost]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> SaveCat([FromBody]CatBindingTarget target)
-        {        
+        {     
            
             Cat cat = target.ToCat();
             await CatRepo.Create(cat);
@@ -71,14 +71,14 @@ namespace WebUI.Server.Controllers {
         [HttpPut]
         public async Task<IActionResult> UpdateCat([FromBody]Cat cat)
         {
-            try
-            {
+            //try
+            //{
                 await CatRepo.Update(cat);
-                return Ok(cat);
-            } catch
-            {
-                return NotFound();
-            }            
+                return Ok();
+            //} catch
+            //{
+            //    return NotFound();
+            //}            
         }
     }
 }

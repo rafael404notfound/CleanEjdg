@@ -6,12 +6,20 @@
 
 @if (CatArray != null)
 {
-	<MudGrid Justify="Justify.FlexStart">
-		@foreach(var cat in CatArray)
+	<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+		@foreach (var cat in CatArray)
 		{
-			<MudItem xs="3">
-				<MudCard>			
-					<MudCarousel Class="mud-width-full rounded-top" Style="height:200px;" ShowArrows="true" ShowBullets="true" EnableSwipeGesture="true" AutoCycle="false" TData="object">
+			 
+		
+				<MudCard Style="width:200px">			
+					<MudCarousel Class="mud-width-full rounded-top" Style="height:200px" ShowArrows="true" ShowBullets="true" EnableSwipeGesture="true" AutoCycle="false" TData="object">
+						@foreach(var image in cat.Photos){
+							<MudCarouselItem Transition="Transition.Fade" Color="@Color.Primary">
+							<div class="d-flex">
+								<MudImage src="@GetImageSrc(image)" Style="object-fit:contain;width:100%;height:100%"></MudImage>
+							</div>							
+							</MudCarouselItem>
+						}
 						<MudCarouselItem Transition="Transition.Fade" Color="@Color.Primary">
 							<div class="d-flex" style="height:100%">
 								<MudImage src="images/1_1.jpg"></MudImage>
@@ -31,9 +39,8 @@
 						<MudText>@(cat.HasChip == true ? "✅" : "❌") Con chip</MudText>
 					</MudCardContent>
 				</MudCard>
-			</MudItem>
 		}
-	</MudGrid>
+	</div>		
 }
 
 
@@ -55,9 +62,16 @@
 		{
 			var dataArray = userdata.Split(';', 2);
 			if (dataArray.Length == 2)
-				 authToken = dataArray[1];
+				authToken = dataArray[1];
 		}
 		Http.DefaultRequestHeaders.Add("Authorization", $"Bearer {authToken}");
 		CatArray = await Http.GetFromJsonAsync<IEnumerable<Cat>>("/api/Cats");
 	}
+
+	public string GetImageSrc(CatPhoto image)
+	{
+		if (image != null && image.Bytes != null) return "data:image/jpeg;base64," + Convert.ToBase64String(image.Bytes);
+		else return "";
+	}
+
 }

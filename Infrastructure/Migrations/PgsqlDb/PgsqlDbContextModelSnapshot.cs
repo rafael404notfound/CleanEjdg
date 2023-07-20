@@ -31,7 +31,7 @@ namespace Infrastructure.Migrations.PgsqlDb
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("DateOfBirth")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<bool>("HasChip")
                         .HasColumnType("boolean");
@@ -48,6 +48,52 @@ namespace Infrastructure.Migrations.PgsqlDb
                     b.HasKey("Id");
 
                     b.ToTable("Cats");
+                });
+
+            modelBuilder.Entity("CleanEjdg.Core.Domain.Entities.CatPhoto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<byte[]>("Bytes")
+                        .HasColumnType("bytea");
+
+                    b.Property<int>("CatId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("FileExtension")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<decimal>("Size")
+                        .HasColumnType("numeric");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CatId");
+
+                    b.ToTable("CatPhoto");
+                });
+
+            modelBuilder.Entity("CleanEjdg.Core.Domain.Entities.CatPhoto", b =>
+                {
+                    b.HasOne("CleanEjdg.Core.Domain.Entities.Cat", null)
+                        .WithMany("Photos")
+                        .HasForeignKey("CatId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("CleanEjdg.Core.Domain.Entities.Cat", b =>
+                {
+                    b.Navigation("Photos");
                 });
 #pragma warning restore 612, 618
         }

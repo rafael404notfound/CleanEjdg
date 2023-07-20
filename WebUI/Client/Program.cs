@@ -13,6 +13,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 builder.Services.AddScoped<ICatService, CatService>();
 builder.Services.AddScoped<IDateTimeServer, DateTimeServer>();
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IImageService, ImageService>();
 builder.Services.AddMudServices();
 
 

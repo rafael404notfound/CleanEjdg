@@ -21,12 +21,21 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
     public class IntegrationTestFactory : WebApplicationFactory<Program> , IAsyncLifetime
     {
         private readonly PostgreSqlContainer _container;
+        private readonly PostgreSqlContainer _productDbContainer;
         private readonly PostgreSqlContainer _identityContainer;
 
         public IntegrationTestFactory()
         {
             _container = new PostgreSqlBuilder()
                 .WithDatabase("test_db")
+                .WithUsername("postgres")
+                .WithPassword("password")
+                .WithImage("postgres:14.7")
+                .WithCleanUp(true)
+                .Build();
+            
+            _productDbContainer = new PostgreSqlBuilder()
+                .WithDatabase("product_db")
                 .WithUsername("postgres")
                 .WithPassword("password")
                 .WithImage("postgres:14.7")
@@ -48,6 +57,7 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
             {
                 // Remove AppDbContext
                 services.RemoveDbContext<PgsqlDbContext>();
+                services.RemoveDbContext<ProductDbContext>();
                 //services.RemoveDbContext<IdentityContext>();
 
                 /*
@@ -67,6 +77,10 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
                 {
                     opts.UseNpgsql(_container.GetConnectionString());
                 });
+                services.AddDbContext<ProductDbContext>(opts =>
+                {
+                    opts.UseNpgsql(_productDbContainer.GetConnectionString());
+                });
 
                 /*
                 // Add Identity
@@ -79,6 +93,7 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
 
                 // Ensure schema gets created
                 services.EnsureDbCreated<PgsqlDbContext>();
+                services.EnsureDbCreated<ProductDbContext>();
                 //services.EnsureDbCreated<IdentityContext>();
             });
         }
@@ -87,24 +102,36 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
         {
             await _container.StartAsync();
             await _identityContainer.StartAsync();
+            await _productDbContainer.StartAsync();
         }
 
         public new async Task DisposeAsync()
         {
             await _container.DisposeAsync();
             await _identityContainer.DisposeAsync();
+            await _productDbContainer.DisposeAsync();
         }
 
-        public DbContextOptions<PgsqlDbContext> GetDbContextOptions()
+        public DbContextOptions<T> GetDbContextOptions<T>() where T : DbContext
         {
-            return new DbContextOptionsBuilder<PgsqlDbContext>().UseNpgsql(_container.GetConnectionString()).Options;
+            if (typeof(T) == typeof(PgsqlDbContext))
+            {
+                return new DbContextOptionsBuilder<T>().UseNpgsql(_container.GetConnectionString()).Options;
+            }
+
+            if (typeof(T) == typeof(ProductDbContext))
+            {
+                return new DbContextOptionsBuilder<T>().UseNpgsql(_productDbContainer.GetConnectionString()).Options;
+            }
+
+            else throw new ArgumentException("Generic type has to be either PgsqlDbcontext or ProductDbContext");
         }
 
-        public async Task SetDbInitialState(IEnumerable<Cat>? cats = null, IEnumerable<UserDto>? userDtos = null, IEnumerable<IdentityRole>? roles = null)
+        public async Task SetDbInitialState(IEnumerable<Cat>? cats = null, IEnumerable<UserDto>? userDtos = null, IEnumerable<IdentityRole>? roles = null, IEnumerable<Product>? products = null)
         {
-            var dbOptions = GetDbContextOptions();
+            var pgsqlDbOptions = GetDbContextOptions<PgsqlDbContext>();
 
-            using (var context = new PgsqlDbContext(dbOptions))
+            using (var context = new PgsqlDbContext(pgsqlDbOptions))
             {
                 // Remove all cats from db
                 foreach(Cat c in context.Cats)
@@ -118,6 +145,28 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
                 {
                     context.Cats.AddRange(cats);
                     context.SaveChanges();
+                }
+            }
+
+            var productDbOptions = GetDbContextOptions<ProductDbContext>();
+
+            using (var productsContext = new ProductDbContext(productDbOptions))
+            {
+                // Remove all cats from db
+                if(productsContext.Products != null)
+                {
+                    foreach (Product p in productsContext.Products)
+                    {
+                        productsContext.Remove(p);
+                    }
+                    productsContext.SaveChanges();
+                }
+
+                // Store cats in db
+                if (products != null)
+                {
+                    productsContext.Products.AddRange(products);
+                    productsContext.SaveChanges();
                 }
             }
             /*

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using CleanEjdg.Core.Domain.Entities;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 namespace CleanEjdg.Core.Application.Common
 {
@@ -7,9 +8,9 @@ namespace CleanEjdg.Core.Application.Common
     {
         DbSet<Cat> Cats { get; }
 
-        string ConnectionString { get; }
-
+        void SaveChanges();
         Task SaveChangesAsync();
-
+        EntityEntry Entry<TEntity>(TEntity entity) where TEntity : class;
+        void Remove(CatPhoto catPhoto);
     }
 }

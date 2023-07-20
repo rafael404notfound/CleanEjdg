@@ -1,6 +1,7 @@
 ﻿
 using System.Net;
 using System.Net.Http.Json;
+using System.Text;
 using System.Text.Json;
 
 namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
@@ -18,15 +19,15 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
             new Cat
             {
                 Name = "Susan",
-                DateOfBirth = new DateTime(2021, 2, 23),
+                DateOfBirth = DateTime.SpecifyKind( new DateTime(2021, 2, 23), DateTimeKind.Utc),
                 HasChip = true,
                 IsSterilized = true,
-                IsVaccinated = true
+                IsVaccinated = true,
             },
             new Cat
             {
                 Name = "Yuki",
-                DateOfBirth = new DateTime(2022, 8, 15),
+                DateOfBirth =  DateTime.SpecifyKind( new DateTime(2022, 8, 15), DateTimeKind.Utc),
                 HasChip = true,
                 IsSterilized = true,
                 IsVaccinated = false

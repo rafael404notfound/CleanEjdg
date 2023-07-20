@@ -1,0 +1,12 @@
+C:\Users\Rafita\source\repos\CleanEjdg\WEbUi\Shared\bin\Release\net6.0\WebUI.Shared.deps.json
+C:\Users\Rafita\source\repos\CleanEjdg\WEbUi\Shared\bin\Release\net6.0\WebUI.Shared.dll
+C:\Users\Rafita\source\repos\CleanEjdg\WEbUi\Shared\bin\Release\net6.0\WebUI.Shared.pdb
+C:\Users\Rafita\source\repos\CleanEjdg\WEbUi\Shared\obj\Release\net6.0\WebUI.Shared.csproj.AssemblyReference.cache
+C:\Users\Rafita\source\repos\CleanEjdg\WEbUi\Shared\obj\Release\net6.0\WebUI.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rafita\source\repos\CleanEjdg\WEbUi\Shared\obj\Release\net6.0\WebUI.Shared.AssemblyInfoInputs.cache
+C:\Users\Rafita\source\repos\CleanEjdg\WEbUi\Shared\obj\Release\net6.0\WebUI.Shared.AssemblyInfo.cs
+C:\Users\Rafita\source\repos\CleanEjdg\WEbUi\Shared\obj\Release\net6.0\WebUI.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Rafita\source\repos\CleanEjdg\WEbUi\Shared\obj\Release\net6.0\WebUI.Shared.dll
+C:\Users\Rafita\source\repos\CleanEjdg\WEbUi\Shared\obj\Release\net6.0\refint\WebUI.Shared.dll
+C:\Users\Rafita\source\repos\CleanEjdg\WEbUi\Shared\obj\Release\net6.0\WebUI.Shared.pdb
+C:\Users\Rafita\source\repos\CleanEjdg\WEbUi\Shared\obj\Release\net6.0\ref\WebUI.Shared.dll

@@ -29,11 +29,20 @@ builder.Services.AddDbContext<PgsqlDbContext>( opts =>
     //opts.EnableSensitiveDataLogging(true);
     //opts.UseSqlServer(builder.Configuration["ConnectionStrings:CatsConnection"]);
     opts.EnableSensitiveDataLogging(true);
+    AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+});
+builder.Services.AddDbContext<ProductDbContext>(opts =>
+{
+    opts.UseNpgsql(builder.Configuration["ConnectionStrings:ProductConnection"]);
+    opts.EnableSensitiveDataLogging(true);
+    AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 });
 builder.Services.AddDbContext<IdentityContext>(opts => opts.UseNpgsql(builder.Configuration["ConnectionStrings:IdentityConnection"]));
 builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<IdentityContext>();
 builder.Services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<PgsqlDbContext>());
+builder.Services.AddScoped<IProductDbContext>(provider => provider.GetRequiredService<ProductDbContext>());
 builder.Services.AddScoped<IRepositoryBase<Cat>, EFCatRepository>();
+builder.Services.AddScoped<IRepositoryBase<Product>, EFProductRepository>();
 builder.Services.AddScoped<UserRepository>();
 builder.Services.AddScoped<IDateTimeServer, DateTimeServer>();
 builder.Services.AddScoped<ICatService, CatService>();
@@ -123,7 +132,8 @@ app.UseSwaggerUI(opts =>
 var roleManager = app.Services.CreateScope().ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 var userManager = app.Services.CreateScope().ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
 await RoleSeedData.SeedDataBase(roleManager, userManager);
-//CatSeedData.SeedDataBase(applicationDbContext);
+//var dbContext = app.Services.CreateScope().ServiceProvider.GetRequiredService<IApplicationDbContext>();
+//CatSeedData.SeedDataBase(dbContext);
 
 
 app.Run();

@@ -1,5 +1,9 @@
 using CleanEjdg.Core.Domain.Common;
+using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CleanEjdg.Core.Domain.Entities {
 
@@ -13,6 +17,11 @@ namespace CleanEjdg.Core.Domain.Entities {
         public bool HasChip { get; set; } = false;
         [Required]
         public bool IsSterilized { get; set; } = false;
+
+        public List<CatPhoto> Photos { get; set; } = new List<CatPhoto>();
+
+        [NotMapped]
+        public List<IBrowserFile>? Files { get; set; }
 
 
         /* *****NO LONGER NEEDED BEACAUSE AGE IS NOW CALCULATED THROUGH CATSERVICE*****
