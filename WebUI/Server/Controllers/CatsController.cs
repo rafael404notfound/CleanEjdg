@@ -49,7 +49,7 @@ namespace WebUI.Server.Controllers {
         {     
            
             Cat cat = target.ToCat();
-            await CatRepo.Create(cat);
+            CatRepo.Create(cat);
             return Ok(cat);
                         
         }

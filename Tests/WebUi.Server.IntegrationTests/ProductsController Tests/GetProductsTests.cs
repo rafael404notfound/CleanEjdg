@@ -4,7 +4,7 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 
-namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
+namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests.ProductControllerTests
 {
     public class GetProductsTests : IClassFixture<IntegrationTestFactory>
     {
@@ -54,7 +54,7 @@ namespace CleanEjdg.Tests.WebUi.Server.IntegrationTests
             await _factory.SetDbInitialState(products: TestProducts);
 
             // Act
-            var response = await client.GetAsync("api/Products");
+            var response = await client.GetAsync("api/products");
 
             // Assert
             Product[] result = await response.Content.ReadFromJsonAsync<Product[]>() ?? new Product[0];

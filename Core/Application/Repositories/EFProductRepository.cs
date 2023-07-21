@@ -13,11 +13,11 @@ namespace CleanEjdg.Core.Application.Repositories
             DbContext = dbContext;
         }
 
-        public async Task Create(Product entity)
+        public void Create(Product entity)
         {
             // Save new Cat in db
-            await DbContext.Products.AddAsync(entity);
-            await DbContext.SaveChangesAsync();
+            DbContext.Products.Add(entity);
+            DbContext.SaveChanges();
         }
 
         // Returns false if an the entity didnt exist

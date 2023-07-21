@@ -13,7 +13,7 @@ namespace CleanEjdg.Core.Application.Repositories
             DbContext = dbContext;
         }
 
-        public async Task Create(Cat entity)
+        public void Create(Cat entity)
         {
             /*
             // Create a new cat instance that will be saved in db
@@ -84,8 +84,8 @@ namespace CleanEjdg.Core.Application.Repositories
             }*/
             
             // Save new Cat in db
-            await DbContext.Cats.AddAsync(entity);
-            await DbContext.SaveChangesAsync();
+            DbContext.Cats.Add(entity);
+            DbContext.SaveChanges();
         }
 
         // Returns false if an the entity didnt exist
