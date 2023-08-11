@@ -1,0 +1,132 @@
+﻿@page "/admin/editar/{id:int}"
+@inject HttpClient httpClient
+@inject NavigationManager navManager
+@inject IJSRuntime jsr
+@inject IImageService imgService
+@inject IDialogService DialogService
+
+<EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator/>    
+    <MudCard>
+        <MudCardContent>
+            <MudTextField Label="Nombre" HelperText="Max. 8 characters"
+                            @bind-Value="model.Name" For="@(() => model.Name)"/>
+            <MudDatePicker Label="Fecha de nacimiento" @bind-Date="model.DateOfBirth" For="@(() => model.DateOfBirth)"/>
+            <MudCheckBox Label="Esterilizado" @bind-Checked="@model.IsSterilized"></MudCheckBox>
+            <MudCheckBox Label="Con chip" @bind-Checked="@model.HasChip"></MudCheckBox>
+            <MudCheckBox Label="Vacunado" @bind-Checked="@model.IsVaccinated"></MudCheckBox>
+        </MudCardContent>
+        <MudText>Fotos</MudText>
+        <MudGrid Justify="Justify.FlexStart">
+            @foreach(var photo in model.Photos)
+            {
+                <MudItem xs="3">
+                    <div class="d-flex justify-content-end"  style="overflow:hidden">
+				        <MudImage src="@imgService.GetImageSrc(photo.Bytes)" Style="object-fit:contain;width:100%;"></MudImage>
+                        <MudButton @onclick="@(() => DeleteImage(photo))" Variant="Variant.Filled" Color="Color.Error" StartIcon="@Icons.Material.Filled.Delete" Size="Size.Small" Style="position:absolute;" Class="m-2"></MudButton>
+			        </div>
+                </MudItem>
+            }
+        </MudGrid>
+        <MudCardActions>
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Guardar</MudButton>
+        </MudCardActions>
+    </MudCard>    
+</EditForm>
+<MudFileUpload T="IBrowserFile" Accept=".png, .jpg" FilesChanged="UploadFiles" MaximumFileCount="6">
+    <ButtonTemplate>
+        <MudButton HtmlTag="label"
+                    Variant="Variant.Filled"
+                    Color="Color.Primary"
+                    StartIcon="@Icons.Material.Filled.CloudUpload"
+                    for="@context">
+            Only image files
+        </MudButton>
+    </ButtonTemplate>
+</MudFileUpload>
+@code {
+    private Cat cat { get; set; } = new Cat();
+    private CatBindingTarget model { get; set; } = new CatBindingTarget();
+    private Cat savedCat { get; set; } = new Cat();
+    [Parameter]
+    public int? Id { get; set; }
+    private string token { get; set; } = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        var userdata = await jsr.InvokeAsync<string>("localStorage.getItem", "user").ConfigureAwait(false);
+        if (!string.IsNullOrWhiteSpace(userdata))
+        {
+            var dataArray = userdata.Split(';', 2);
+            if (dataArray.Length == 2)
+            {
+                token = dataArray[1]; 
+            }
+        }
+        //cat = await httpClient.GetFromJsonAsync<Cat>($"api/Cats/{Id}") ?? new Cat();
+
+        var requestMessage = new HttpRequestMessage(HttpMethod.Get, $"/api/cats/{Id}");
+        requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+        var response = await httpClient.SendAsync(requestMessage);
+        if (response.IsSuccessStatusCode)
+        {
+            cat = await response.Content.ReadFromJsonAsync<Cat>() ?? new Cat();
+        }
+        model.Name = cat.Name ?? "";
+        model.DateOfBirth = cat.DateOfBirth;
+        model.HasChip = cat.HasChip;
+        if (model.HasChip == null) model.HasChip = false;
+        model.IsVaccinated = cat.IsVaccinated;
+        if (model.IsVaccinated == null) model.IsVaccinated = false;
+        model.IsSterilized = cat.IsSterilized;
+        if (model.IsSterilized == null) model.IsSterilized = false;
+        model.Photos = cat.Photos;
+    }
+
+    private async Task OnValidSubmit(EditContext context)
+    {
+        savedCat = model.ToCat();
+        savedCat.Id = cat.Id;
+        var response = await httpClient.PutAsJsonAsync("api/Cats", savedCat);
+        navManager.NavigateTo("admin/gatos");
+    }
+
+    private async Task UploadFiles(IBrowserFile file)
+    {
+        // Create Array of bytes with file content
+        var buffer = new byte[file.Size];    
+        await file.OpenReadStream().ReadAsync(buffer);
+        // Create array of bytes with the resized image content
+        //var imgSrc = "data:image/jpeg;base64," + Convert.ToBase64String(buffer);
+        var resizedBuffer = imgService.ResizeImage(buffer);
+        // Create CatPhoto with the resized image bytes
+        var newPhoto = new CatPhoto()
+        {
+            Bytes = resizedBuffer,
+            Description = file.Name,
+            FileExtension = file.ContentType,
+            Size = file.Size,
+        };    
+        // Add the photo instance to the list
+        model.Photos.Add(newPhoto);
+    }
+
+    private async Task DeleteImage(CatPhoto photo) {
+        var parameters = new DialogParameters();
+        parameters.Add("ContentText", "Estas seguro de que quieres borrar esta foto? Si guardas estos cambios no podras recuperarla.");
+        parameters.Add("ButtonText", "Borrar");
+        parameters.Add("Color", Color.Error);
+
+        var options = new DialogOptions() { CloseButton = true, MaxWidth = MaxWidth.ExtraSmall };
+
+        var dialog = DialogService.Show<Dialog>("Borrar", parameters, options);
+        DialogResult result = await dialog.Result;
+
+        if (!result.Canceled)
+        {
+            model.Photos.Remove(photo);
+        }
+	}
+
+
+}

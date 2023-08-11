@@ -1,0 +1,70 @@
+﻿@page "/admin/pedidos"
+@using Microsoft.AspNetCore.Mvc
+@inject HttpClient httpClient
+@inject IDialogService DialogService
+@inject IImageService imgService
+
+<div class="d-flex flex-row container-fluid">
+	<AdminNavMenu></AdminNavMenu>
+	<div>
+		<h4>Por enviar</h4>
+		<MudTable Items="@NotSentOrders" Hover="true" LoadingProgressColor="Color.Info">
+			<HeaderContent>
+				<MudTh class="text-center"> ID </MudTh>
+				<MudTh class="text-center"> Pago </MudTh>
+				<MudTh Class="text-center"> Email </MudTh>
+				<MudTh Class="text-center"> Fecha </MudTh>
+				<MudTh></MudTh>
+			</HeaderContent>
+			<RowTemplate>				
+				<MudTd DataLabel="Id" class="text-center">@context.Id.ToString()</MudTd>
+				<MudTd DataLabel="Id" class="text-center">@context.TotalPaymet</MudTd>
+				<MudTd DataLabel="Id" class="text-center">@context.CustomerEmail</MudTd>
+				<MudTd DataLabel="Id" class="text-center">@context.CreatedAt.ToString()</MudTd>
+				<MudTd>
+					<MudButton @onclick="@(async () => await UpdateOrder(context.Id, true))" Variant="Variant.Filled" Color="Color.Warning" StartIcon="@Icons.Material.Filled.ScheduleSend" Size="Size.Small">Marcar como enviado</MudButton>
+				</MudTd>
+			</RowTemplate>
+		</MudTable>
+		<h4>Enviados</h4>
+		<MudTable Items="@SentOrders" Hover="true" LoadingProgressColor="Color.Info">
+			<HeaderContent>
+				<MudTh class="text-center"> ID </MudTh>
+				<MudTh class="text-center"> Pago </MudTh>
+				<MudTh Class="text-center"> Email </MudTh>
+				<MudTh Class="text-center"> Fecha </MudTh>
+				<MudTh></MudTh>
+			</HeaderContent>
+			<RowTemplate>				
+				<MudTd DataLabel="Id" class="text-center">@context.Id.ToString()</MudTd>
+				<MudTd DataLabel="Id" class="text-center">@context.TotalPaymet</MudTd>
+				<MudTd DataLabel="Id" class="text-center">@context.CustomerEmail</MudTd>
+				<MudTd DataLabel="Id" class="text-center">@context.CreatedAt.ToString()</MudTd>
+				<MudTd>
+					<MudButton @onclick="@(async () => await UpdateOrder(context.Id, false))" Variant="Variant.Filled" Color="Color.Warning" StartIcon="@Icons.Material.Filled.ScheduleSend" Size="Size.Small">Marcar como enviado</MudButton>
+				</MudTd>
+			</RowTemplate>
+		</MudTable>
+	</div>	
+</div>
+
+
+@code {
+	private IEnumerable<Order> Orders = new List<Order>();
+	private IEnumerable<Order> SentOrders = new List<Order>();
+	private IEnumerable<Order> NotSentOrders = new List<Order>();
+
+	protected override async Task OnInitializedAsync()
+	{
+		Orders = await httpClient.GetFromJsonAsync<List<Order>>("api/orders") ?? new List<Order>();
+		SentOrders = Orders.Where(o => o.Sent == true);
+		NotSentOrders = Orders.Where(o => o.Sent == false);
+	}
+
+	private async Task UpdateOrder(int id, bool sent)
+	{
+		var order = Orders.FirstOrDefault(o => o.Id == id);
+		order.Sent = sent; 
+		await httpClient.PutAsJsonAsync("api/orders", order);
+	}
+}

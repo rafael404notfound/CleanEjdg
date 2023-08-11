@@ -20,16 +20,6 @@
 							</div>							
 							</MudCarouselItem>
 						}
-						<MudCarouselItem Transition="Transition.Fade" Color="@Color.Primary">
-							<div class="d-flex" style="height:100%">
-								<MudImage src="images/1_1.jpg"></MudImage>
-							</div>							
-						</MudCarouselItem>
-						<MudCarouselItem Transition="Transition.Fade" Color="@Color.Secondary">
-							<div class="d-flex" style="height:100%">
-								<MudImage src="images/1_2.jpg"></MudImage>
-							</div>
-						</MudCarouselItem>
 					</MudCarousel>	
 					<MudCardContent>
 						<MudText Typo="Typo.h6">@cat.Name</MudText>
@@ -56,15 +46,6 @@
 
 	protected override async Task OnInitializedAsync()
 	{
-		string authToken = "";
-		var userdata = await jsr.InvokeAsync<string>("localStorage.getItem", "user").ConfigureAwait(false);
-		if (!string.IsNullOrWhiteSpace(userdata))
-		{
-			var dataArray = userdata.Split(';', 2);
-			if (dataArray.Length == 2)
-				authToken = dataArray[1];
-		}
-		Http.DefaultRequestHeaders.Add("Authorization", $"Bearer {authToken}");
 		CatArray = await Http.GetFromJsonAsync<IEnumerable<Cat>>("/api/Cats");
 	}
 

@@ -14,7 +14,7 @@ namespace CleanEjdg.Core.Domain.Entities
         [MaxLength(30)]
         public string Name { get; set; } = string.Empty;
         [Required]
-        [Range(0.1, int.MaxValue, ErrorMessage = "El precio no puede ser negativo ")]
+        //[Range(0.1, int.MaxValue, ErrorMessage = "El precio no puede ser negativo ")]
         public int Price { get; set; }
         [Required]
         public string Category { get; set; } = string.Empty;

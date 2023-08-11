@@ -2,7 +2,7 @@
   "Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\application",
   "Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Core\\Domain",
   "Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\Infrastructure",
-  "WebUI.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Client",
-  "WebUI.Server, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUI\\Server",
+  "WebUI.Client": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUi\\Client",
+  "WebUI.Server": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WebUI\\Server",
   "WebUI.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\WEbUi\\Shared"
 }

@@ -37,15 +37,26 @@ builder.Services.AddDbContext<ProductDbContext>(opts =>
     opts.EnableSensitiveDataLogging(true);
     AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 });
+builder.Services.AddDbContext<OrderDbContext>(opts =>
+{
+    opts.UseNpgsql(builder.Configuration["ConnectionStrings:OrderConnection"]);
+    opts.EnableSensitiveDataLogging(true);
+    AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+});
 builder.Services.AddDbContext<IdentityContext>(opts => opts.UseNpgsql(builder.Configuration["ConnectionStrings:IdentityConnection"]));
 builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<IdentityContext>();
 builder.Services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<PgsqlDbContext>());
 builder.Services.AddScoped<IProductDbContext>(provider => provider.GetRequiredService<ProductDbContext>());
+builder.Services.AddScoped<IOrderDbContext>(provider => provider.GetRequiredService<OrderDbContext>());
 builder.Services.AddScoped<IRepositoryBase<Cat>, EFCatRepository>();
 builder.Services.AddScoped<IRepositoryBase<Product>, EFProductRepository>();
+builder.Services.AddScoped<IRepositoryBase<Order>, EFOrderRepository>();
 builder.Services.AddScoped<UserRepository>();
 builder.Services.AddScoped<IDateTimeServer, DateTimeServer>();
 builder.Services.AddScoped<ICatService, CatService>();
+builder.Services.AddScoped<IImageService, ImageService>();
+builder.Services.AddScoped<IPaymentService, PaymentService>();
+builder.Services.AddScoped<HttpClient>();
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -89,6 +100,8 @@ builder.Services.AddAuthentication(options =>
     });*/
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Ejdg Api", Version = "v1" });
@@ -112,6 +125,7 @@ app.UseHttpsRedirection();
 
 app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
+app.UseSession();
 
 app.UseAuthentication();
 

@@ -22,20 +22,44 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Pages/CatCreate.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0Q3JlYXRlLnJhem9y
+[C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Pages/Admin/Cats/CatCreate.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2F0c1xDYXRDcmVhdGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Pages/CatEdit.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0RWRpdC5yYXpvcg==
+[C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Pages/Admin/Cats/CatEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2F0c1xDYXRFZGl0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Pages/Admin/Cats/CatsAdminList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2F0c1xDYXRzQWRtaW5MaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Pages/Admin/Orders/OrdersAdminList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cT3JkZXJzXE9yZGVyc0FkbWluTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Pages/Admin/Products/ProductCreate.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvZHVjdHNcUHJvZHVjdENyZWF0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Pages/Admin/Products/ProductEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvZHVjdHNcUHJvZHVjdEVkaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Pages/Admin/Products/ProductsAdminList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUHJvZHVjdHNcUHJvZHVjdHNBZG1pbkxpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Pages/Admin/Users/UserEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcVXNlckVkaXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Pages/Admin/Users/UsersList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVXNlcnNcVXNlcnNMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Pages/Cats.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0cy5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Pages/CatsAdminList.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0c0FkbWluTGlzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Pages/Counter.razor]
@@ -58,12 +82,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Pages/UserEdit.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckVkaXQucmF6b3I=
+[C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Pages/OrderSuccess.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJTdWNjZXNzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Pages/UsersList.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNMaXN0LnJhem9y
+[C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Pages/Products.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Shared/AdminNavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEFkbWluTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rafita/source/repos/CleanEjdg/WebUi/Client/Shared/Dialog.razor]

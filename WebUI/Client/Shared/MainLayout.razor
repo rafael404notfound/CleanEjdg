@@ -1,21 +1,64 @@
 ﻿@inherits LayoutComponentBase
+@inject ICartService cartService
+@inject IImageService imgService
+@inject NavigationManager navManager
 
 <MudThemeProvider/>
 <MudDialogProvider/>
 <MudSnackbarProvider/>
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+<MudLayout>
+    <MudDrawer @bind-Open="@drawerIsOpen" Anchor="Anchor.End" Width="35%" Elevation="3" Variant="@DrawerVariant.Temporary">
+        <MudDrawerHeader>
+            <MudText Typo="Typo.h6">Tu Carro</MudText>
+        </MudDrawerHeader>
+        <MudNavMenu>
+            <div class="container">
+                @foreach(var Line in cartService.Cart.Lines){                    
+                    <div class="row">
+                        <MudImage Style="max-width: 40%" Src="@GetImgPath(Line.Product)" Class="p-2 mr-2"></MudImage>
+                        <MudText Class="col-3">@Line.Product.Name</MudText>
+                        <div class="col-3 mr-2">
+                            <MudNumericField @bind-Value="Line.Quantity" Label="Cantidad" Variant="Variant.Outlined" Min="1"/>
+                        </div>
+                    </div>
+                }
+            </div>
+            <MudButton Variant="Variant.Filled" Color="Color.Success" OnClick="Checkout">Terminar y pagar</MudButton>
+        </MudNavMenu>
+    </MudDrawer>
+    <NavMenu DrawerEvent = "@ToggleDrawer"/>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
+    <main class="container-fluid">
+        <CascadingValue Value="ToggleEvent">
             @Body
-        </article>
+        </CascadingValue>        
     </main>
-</div>
+    
+</MudLayout>
+
+@code
+{
+    bool drawerIsOpen = false;
+    public EventCallback ToggleEvent => EventCallback.Factory.Create(this, ToggleDrawer);
+
+    protected override async Task OnInitializedAsync() => await cartService.GetCart();
+
+    public async Task ToggleDrawer()
+    {
+        await cartService.GetCart();
+        drawerIsOpen = !drawerIsOpen;
+    }
+
+    private string GetImgPath(Product product)
+    {
+        if (product.Photos.First().Bytes != null) return imgService.GetImageSrc(product.Photos.First().Bytes);
+        else return ""; 
+    }
+
+    public async Task Checkout()
+    {
+        var checkoutUrl = await cartService.Checkout();
+        navManager.NavigateTo(checkoutUrl);
+    }
+}

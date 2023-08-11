@@ -51,7 +51,7 @@ namespace CleanEjdg.Core.Application.Repositories
                 var photo = entity.Photos.SingleOrDefault(p => p.Id == productPhoto.Id);
                 if (photo != null)
                 {
-                    //no need to change the photo since photos never change, htey are only added or removed
+                    //no need to update the photo since photos never change, htey are only added or removed
                     //DbContext.Entry(catPhotos).CurrentValues.SetValues(photo);
                 }
                 else

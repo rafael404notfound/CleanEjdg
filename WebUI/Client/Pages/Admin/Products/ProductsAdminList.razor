@@ -1,0 +1,71 @@
+﻿@page "/admin/productos"
+@inject HttpClient httpClient
+@inject IDialogService DialogService
+@inject IImageService imgService
+
+<div class="d-flex flex-row container-fluid">
+	<AdminNavMenu></AdminNavMenu>
+
+	<div>
+		<MudTable Items="@Products" Hover="true" LoadingProgressColor="Color.Info" Class="d-flex p-0 m-0">
+			<HeaderContent>
+				<MudTh class="col-1"></MudTh>
+				<MudTh class="text-center">Nombre</MudTh>
+				<MudTh class="text-center">Precio</MudTh>
+				<MudTh class="text-center">Categoria</MudTh>
+				<MudTh class="col-6">
+					<MudButton href="/admin/productos/crear" Variant="Variant.Filled" Color="Color.Info" StartIcon="@Icons.Material.Filled.Add" Size="Size.Small">Crear</MudButton>
+				</MudTh>
+			</HeaderContent>
+			<RowTemplate>
+				<MudTd DataLabel="" class="col-1">
+					<MudAvatar Rounded="true" class="m-0 mb-0">
+						<MudImage Src="@GetImgPath(context)" class="align-center m-0"></MudImage>
+					</MudAvatar>
+				</MudTd>
+				<MudTd DataLabel="Nombre" class="text-center">@context.Name</MudTd>
+				<MudTd DataLabel="Precio" class="text-center">@context.Price.ToString("c")</MudTd>
+				<MudTd DataLabel="Categoria" class="text-center">@context.Category</MudTd>
+				<MudTd class="col-6">
+					<MudButton Variant="Variant.Filled" Color="Color.Primary" StartIcon="@Icons.Material.Filled.Search" Size="Size.Small">Detalles</MudButton>
+					<MudButton Href=@($"/admin/productos/editar/{context.Id}") Variant="Variant.Filled" Color="Color.Warning" StartIcon="@Icons.Material.Filled.Edit" Size="Size.Small">Editar</MudButton>
+					<MudButton @onclick="@(() => Delete(context.Id))" Variant="Variant.Filled" Color="Color.Error" StartIcon="@Icons.Material.Filled.Delete" Size="Size.Small">Borrar</MudButton>
+				</MudTd>
+			</RowTemplate>
+		</MudTable>
+	</div>
+</div>
+
+
+@code {
+	private IEnumerable<Product> Products = new List<Product>();
+
+	protected override async Task OnInitializedAsync()
+	{
+		Products = await httpClient.GetFromJsonAsync<List<Product>>("api/products") ?? new List<Product>();
+	}
+
+	private async Task Delete(int id) {
+		var parameters = new DialogParameters();
+		parameters.Add("ContentText", "Estas seguro de que quieres borrar este producto? Una vez borrado no podras recuperarlo.");
+		parameters.Add("ButtonText", "Borrar");
+		parameters.Add("Color", Color.Error);
+
+		var options = new DialogOptions() { CloseButton = true, MaxWidth = MaxWidth.ExtraSmall };
+
+		var dialog = DialogService.Show<Dialog>("Borrar", parameters, options);
+		DialogResult result = await dialog.Result;
+
+		if (!result.Canceled)
+		{
+			var response = await httpClient.DeleteAsync($"api/products/{id}");
+			Products = await httpClient.GetFromJsonAsync<List<Product>>("api/products") ?? new List<Product>();
+		}
+	}
+
+	private string GetImgPath(Product product)
+	{
+		if (product.Photos.First().Bytes != null) return imgService.GetImageSrc(product.Photos.First().Bytes);
+		else return ""; 
+	}
+}

@@ -3,9 +3,9 @@ namespace CleanEjdg.Core.Application.Services
 {
     public class ImageService : IImageService
     {
-        public string GetImageSrc(CatPhoto image)
+        public string GetImageSrc(byte[] image)
         {
-            if (image != null && image.Bytes != null) return "data:image/jpeg;base64," + Convert.ToBase64String(image.Bytes);
+            if (image != null) return "data:image/jpeg;base64," + Convert.ToBase64String(image);
             else return "";
         }
 
