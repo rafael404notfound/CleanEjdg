@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gN3wQKX2u70E5RQMFJmtxc/yyo/U0810W5gWngkzFSnCp/8zRyGI8EnV9yMMagsWSlcpFFWEZoG1s/sPyEW9Xg==",
+  "dgSpecHash": "VNXdhAOCU3qDkTRCuiIC24F7pCqqdwjbdzy6pSahoNnxU8m98W0lh9CdOzOzQ/VroGt39NOAzRfQCae1oIdg2w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\WebUI.Client.csproj",
   "expectedPackageFiles": [
@@ -123,7 +123,7 @@
     "C:\\Users\\Rafita\\.nuget\\packages\\system.threading.tasks\\4.0.11\\system.threading.tasks.4.0.11.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.1\\system.threading.tasks.extensions.4.5.1.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
-    "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.20\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.20.nupkg.sha512"
+    "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.21\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.21.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Umw3+M2YuKl6UkHZb6pdAWWh0ng5T54wxJMAsYIwfavMFlk0i6SM4JI3rhMF+ndMU797Q93fb71e1OJejLcuMg==",
+  "dgSpecHash": "e7br6sLU8SrEymMlJA2fKrcb/QQsefDjxCLbBz1Hzig3h8uVGJV+XDiwMghtORn2UONJnt8pLaKW9Uz3zI5S1Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\users\\rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rafita\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

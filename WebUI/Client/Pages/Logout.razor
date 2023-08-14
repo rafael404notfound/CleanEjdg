@@ -1,11 +1,29 @@
 ﻿@page "/logout"
 @inject IJSRuntime jsr
+@inject AppState appState
+@inject ITokenService tokenService;
+@implements IDisposable
 
 <h4>You have logged out</h4>
 
 @code {
-	protected override async Task OnInitializedAsync()
-	{
-		await jsr.InvokeVoidAsync("localStorage.removeItem", "user");
-	}
+    protected override async Task OnInitializedAsync()
+    {
+        appState.StateChanged += async (source, property) => await AppState_StateChanged(source, property);
+        await tokenService.DeleteToken();
+        appState.UpdateUsername(this, string.Empty);
+    }
+
+	private async Task AppState_StateChanged(ComponentBase source, string property)
+    {
+        if (source != this)
+        {
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
+    void IDisposable.Dispose()
+    {
+        appState.StateChanged -= async (source, property) => await AppState_StateChanged(source, property);
+    }
 }

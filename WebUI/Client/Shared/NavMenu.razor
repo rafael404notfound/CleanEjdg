@@ -1,4 +1,10 @@
-﻿<nav class="navbar navbar-expand-md navbar-light bg-light">
+﻿@inject ITokenService tokenService
+@inject NavigationManager navManager
+@inject AppState appState
+@implements IDisposable
+@inject HttpClient http
+
+<nav class="navbar navbar-expand-md navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="">El Jardinet dels Gats</a>
         <button class="navbar-toggler @NavButtonCssClass" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -17,6 +23,8 @@
                          Adminitistar
                 </NavLink>
                 <button onclick="@(async () => await InvokeDrawerEvent())">Carrito</button>
+                <p>Logged in as @appState.Username</p>
+                <button onclick="@(() => Logout())">Cerrar session</button>
             </div>
         </div>
     </div>
@@ -28,6 +36,7 @@
     private bool collapseNavMenu = true;
     private string? NavBarCssClass => collapseNavMenu ? null : "show";
     private string? NavButtonCssClass => collapseNavMenu ? "collapsed" : null;
+
     private async Task InvokeDrawerEvent()
     {
         await DrawerEvent.InvokeAsync();
@@ -35,5 +44,41 @@
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
+    }
+    protected override async Task OnInitializedAsync()
+  {
+        appState.StateChanged += async (source, property) => await AppState_StateChanged(source, property);
+        // Get Jwt from localstorage
+        var token = await tokenService.GetToken();
+        if (!string.IsNullOrEmpty(token))
+        {
+            // Validate token
+            var response = await http.GetAsync($"/api/auth/validate/{token}");
+            if (response.IsSuccessStatusCode)
+            {
+                // Update AppState username
+                var loginResult = await response.Content.ReadFromJsonAsync<LoginResult>();
+                if (loginResult!= null) appState.UpdateUsername(this, loginResult.UserName);
+            }
+        }
+    }
+
+    private async Task Logout()
+    {
+        await tokenService.DeleteToken();
+        navManager.NavigateTo("/logout");
+    }
+
+    private async Task AppState_StateChanged(ComponentBase source, string property)
+    {
+        if (source != this)
+        {
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
+    void IDisposable.Dispose()
+    {
+        appState.StateChanged -= async (source, property) => await AppState_StateChanged(source, property);
     }
 }

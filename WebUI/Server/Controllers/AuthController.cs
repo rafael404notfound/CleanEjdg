@@ -59,9 +59,9 @@ namespace WebUI.Server.Controllers
 
         }
         
-        [HttpPost]
-        [Route("validate")]
-        public IActionResult ValidateToken([FromBody]string token)
+        [HttpGet]
+        [Route("validate/{token}")]
+        public IActionResult ValidateToken(string token)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetValue<String>("Jwt:Key")));
@@ -79,9 +79,14 @@ namespace WebUI.Server.Controllers
                 }, out SecurityToken validatedToken);
 
                 var jwtToken = (JwtSecurityToken)validatedToken;
-                var userEmail = jwtToken.Claims.First(x => x.Type == ClaimTypes.Email).Value;
+                var result = new LoginResult
+                {
+                    Email = jwtToken.Claims.First(x => x.Type == ClaimTypes.Email).Value,
+                    UserName = jwtToken.Claims.First(x => x.Type == ClaimTypes.Name).Value,
+                    JwtBearer = token
+                };
 
-                return Ok(userEmail);
+                return Ok(result);
             }
             catch
             {
@@ -139,7 +144,7 @@ namespace WebUI.Server.Controllers
                 return BadRequest(new LoginResult { Message = "Unable to Log in", Success = false });
             }
             var token = await CreateJWT(user);
-            return Ok(new LoginResult { Message = "Login successful", JwtBearer = token, Email = userCredentials.Email ?? "", Success = true });
+            return Ok(new LoginResult { Message = "Login successful", JwtBearer = token, Email = userCredentials.Email ?? "", UserName = userCredentials.UserName, Success = true });
         }
 
         [HttpGet]

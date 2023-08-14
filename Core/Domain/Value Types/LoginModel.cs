@@ -11,6 +11,7 @@ namespace CleanEjdg.Core.Domain.ValueTypes
         public string Message { get; set; } = String.Empty;
         public string Email { get; set; } = String.Empty;
         public string JwtBearer { get; set; } = String.Empty;
+        public string UserName { get; set; } = String.Empty;
         public bool Success { get; set; } = false;
     }
 }

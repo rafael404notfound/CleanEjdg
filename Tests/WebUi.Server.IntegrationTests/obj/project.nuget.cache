@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1D6vXB11Au3McnAmE1UQHB7E73Mn3enKWBELJ9EwQTmBFVo4moEYSJQW80mlxMwVuiYOwQty8LQvCtxs4d65uQ==",
+  "dgSpecHash": "xyu8SFt3mwMT9BWuqT7Tv+CfxmgrvkzPpr74GvNYI833u/NvFcvJGiEwctVPhmy0qJi6HoV++hbsED7Dr6HbgA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\CleanEjdg\\tests\\WebUI.Server.IntegrationTests\\WebUi.Server.IntegrationTests.csproj",
   "expectedPackageFiles": [

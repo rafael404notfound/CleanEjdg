@@ -40,10 +40,10 @@ namespace CleanEjdg.Core.Application.Services
             var token = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "user").ConfigureAwait(false);
             if (!string.IsNullOrWhiteSpace(token))
             {
-                var dataArray = token.Split(';', 2);
-                if (dataArray.Length == 2)
+                var dataArray = token.Split(';');
+                if (dataArray.Length == 3)
                 {
-                    token = dataArray[1];
+                    token = dataArray[2];
                 }
             }
             return token;
@@ -51,7 +51,21 @@ namespace CleanEjdg.Core.Application.Services
 
         public async Task SetToken(LoginResult token)
         {
-            await JSRuntime.InvokeVoidAsync("localStorage.setItem", "user", $"{token.Email};{token.JwtBearer}").ConfigureAwait(false);
+            await JSRuntime.InvokeVoidAsync("localStorage.setItem", "user", $"{token.UserName};{token.Email};{token.JwtBearer}").ConfigureAwait(false);
+        }
+
+        public async Task<string> GetUsername()
+        {
+            var user = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "user").ConfigureAwait(false);
+            if (!string.IsNullOrWhiteSpace(user))
+            {
+                var dataArray = user.Split(';', 3);
+                if (dataArray.Length == 3)
+                {
+                    user = dataArray[0];
+                }
+            }
+            return user;
         }
     }
 }

@@ -13,6 +13,7 @@ namespace CleanEjdg.Core.Application.Services
         Task SetToken(LoginResult token);
         Task DeleteToken();
         Task<LoginResult> CreateToken(UserCredentials credentials);
+        Task<string> GetUsername();
 
     }
 }

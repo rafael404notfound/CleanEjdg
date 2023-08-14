@@ -5538,20 +5538,20 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Application\\Application.csproj"
+            "C:\\users\\rafita\\source\\repos\\cleanejdg\\Core\\Application\\Application.csproj": {
+              "projectPath": "C:\\users\\rafita\\source\\repos\\cleanejdg\\Core\\Application\\Application.csproj"
             },
-            "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj"
+            "C:\\users\\rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\users\\rafita\\source\\repos\\cleanejdg\\Core\\Domain\\Domain.csproj"
             },
-            "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj"
+            "C:\\users\\rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\users\\rafita\\source\\repos\\cleanejdg\\Infrastructure\\Infrastructure.csproj"
             },
             "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\WebUI.Client.csproj": {
               "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\WebUI.Client.csproj"
             },
-            "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WebUi\\Shared\\WebUI.Shared.csproj": {
-              "projectPath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\WebUi\\Shared\\WebUI.Shared.csproj"
+            "C:\\users\\rafita\\source\\repos\\cleanejdg\\webui\\Shared\\WebUI.Shared.csproj": {
+              "projectPath": "C:\\users\\rafita\\source\\repos\\cleanejdg\\webui\\Shared\\WebUI.Shared.csproj"
             }
           }
         }
@@ -5618,7 +5618,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.412\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.413\\RuntimeIdentifierGraph.json"
       }
     }
   }

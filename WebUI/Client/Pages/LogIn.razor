@@ -2,6 +2,9 @@
 @inject HttpClient httpClient 
 @inject IJSRuntime jsr
 @inject NavigationManager navManager
+@inject ITokenService tokenService
+@inject AppState appState
+@implements IDisposable
 
 @if(IsLoggedIn)
 {
@@ -29,7 +32,7 @@
 
 }
 
-    @code {
+@code {
     private UserCredentials model { get; set; } = new UserCredentials();
     private bool WrongCredentials;
     private bool IsLoggedIn { get; set; }
@@ -38,6 +41,7 @@
     {
         WrongCredentials = false;
         IsLoggedIn = await CheckIfLoggedIn();
+        appState.StateChanged += async (source, property) => await AppState_StateChanged(source, property);
     }
 
     private async Task OnValidSubmit()
@@ -48,7 +52,8 @@
             LoginResult result = await response.Content.ReadFromJsonAsync<LoginResult>() ?? new LoginResult();
             if (result.Success)
             {
-                await jsr.InvokeVoidAsync("localStorage.setItem", "user", $"{result.Email};{result.JwtBearer}").ConfigureAwait(false);
+                appState.UpdateUsername(this, result.UserName);
+                await tokenService.SetToken(result);
                 navManager.NavigateTo("/gatos");
             }
         }
@@ -70,5 +75,18 @@
     public async Task<bool> CheckIfLoggedIn(){
         var userdata = await jsr.InvokeAsync<string>("localStorage.getItem", "user");
         return !string.IsNullOrWhiteSpace(userdata);
+    }
+
+    private async Task AppState_StateChanged(ComponentBase source, string property)
+    {
+        if (source != this)
+        {
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
+    void IDisposable.Dispose()
+    {
+        appState.StateChanged -= async (source, property) => await AppState_StateChanged(source, property);
     }
 }
