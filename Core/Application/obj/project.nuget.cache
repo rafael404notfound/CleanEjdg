@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HzDrfcWOvxMwBWdP8zfQH8jBz/qyqZOmxjn5vgbi7rM9kcCMbo/bsP40prZx9P/qWv8Z5XTWEj9uuzOnz/h0Bw==",
+  "dgSpecHash": "GdDsoNRtckPtcrN1vLf5kpfMb4zTl4x1I/tnaXebuLh1umuV98xAa/p02No5/n6cnYdi2wQD4QFEnGge5cCnhw==",
   "success": true,
-  "projectFilePath": "C:\\users\\rafita\\source\\repos\\cleanejdg\\Core\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Rafita\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

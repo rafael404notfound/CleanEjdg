@@ -10,9 +10,9 @@ namespace CleanEjdg.Core.Application.Services
     public interface ITokenService
     {
         Task<string> GetToken();
-        Task SetToken(LoginResult token);
+        Task SetToken(Token token);
         Task DeleteToken();
-        Task<LoginResult> CreateToken(UserCredentials credentials);
+        Task<string> GetRefreshToken();
         Task<string> GetUsername();
 
     }

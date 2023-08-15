@@ -13,9 +13,9 @@ namespace CleanEjdg.Core.Domain.Entities
         public string Email { get; set; } = "";
         public string Password { get; set; } = "";
 
-        public IdentityUser ToIdentityUser()
+        public ApplicationUser ToApplicationUser()
         {
-            IdentityUser user = new IdentityUser()
+            ApplicationUser user = new ApplicationUser()
             {
                 UserName = UserName,
                 Email = Email

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5HpVfJPrZE6hwVuqHDFoZxT/y/X5ufhzY7xtebgFJ7s=",
+  "Hash": "oNSexftVnk/f6SZ+fvl3Ff8udihCOJP9oy55KdjHR3Y=",
   "Source": "WebUI.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -65,7 +65,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\users\\rafita\\source\\repos\\cleanejdg\\Core\\Application\\bin\\Debug\\net6.0\\Application.dll"
+      "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Application\\bin\\Debug\\net6.0\\Application.dll"
     },
     {
       "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Application.pdb",
@@ -82,7 +82,7 @@
       "AssetTraitValue": "symbol",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\users\\rafita\\source\\repos\\cleanejdg\\Core\\Application\\bin\\Debug\\net6.0\\Application.pdb"
+      "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\Core\\Application\\bin\\Debug\\net6.0\\Application.pdb"
     },
     {
       "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.boot.json",
@@ -4247,7 +4247,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\users\\rafita\\source\\repos\\cleanejdg\\webui\\Shared\\bin\\Debug\\net6.0\\WebUI.Shared.dll"
+      "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Shared\\bin\\Debug\\net6.0\\WebUI.Shared.dll"
     },
     {
       "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\WebUI.Shared.pdb",
@@ -4264,7 +4264,7 @@
       "AssetTraitValue": "symbol",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\users\\rafita\\source\\repos\\cleanejdg\\webui\\Shared\\bin\\Debug\\net6.0\\WebUI.Shared.pdb"
+      "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Shared\\bin\\Debug\\net6.0\\WebUI.Shared.pdb"
     },
     {
       "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\WindowsBase.dll",
@@ -4605,23 +4605,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Diagnostics.DiagnosticSource.dll"
-    },
-    {
-      "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\obj\\Debug\\net6.0\\build-gz\\4i4oF+37.gz",
-      "SourceId": "WebUI.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/WebUI.Shared.pdb.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\WebUI.Shared.pdb",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\WebUI.Shared.pdb"
     },
     {
       "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\obj\\Debug\\net6.0\\build-gz\\4nGZzs6t.gz",
@@ -5406,6 +5389,23 @@
       "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.FileSystem.Primitives.dll"
     },
     {
+      "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\obj\\Debug\\net6.0\\build-gz\\DiSLU0hJ.gz",
+      "SourceId": "WebUI.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Application.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Application.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Application.dll"
+    },
+    {
       "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\obj\\Debug\\net6.0\\build-gz\\dlrdJAQU.gz",
       "SourceId": "WebUI.Client",
       "SourceType": "Computed",
@@ -5712,23 +5712,6 @@
       "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipes.AccessControl.dll"
     },
     {
-      "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\obj\\Debug\\net6.0\\build-gz\\g8TmuZ3d.gz",
-      "SourceId": "WebUI.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Application.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Application.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Application.dll"
-    },
-    {
       "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\obj\\Debug\\net6.0\\build-gz\\geI+GeN6.gz",
       "SourceId": "WebUI.Client",
       "SourceType": "Computed",
@@ -5880,6 +5863,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Diagnostics.Process.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\obj\\Debug\\net6.0\\build-gz\\hlJS3ZB5.gz",
+      "SourceId": "WebUI.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/WebUI.Shared.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\WebUI.Shared.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\WebUI.Shared.dll"
     },
     {
       "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\obj\\Debug\\net6.0\\build-gz\\hN1r9C8G.gz",
@@ -6596,6 +6596,23 @@
       "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Runtime.InteropServices.RuntimeInformation.dll"
     },
     {
+      "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\obj\\Debug\\net6.0\\build-gz\\MJSPJb64.gz",
+      "SourceId": "WebUI.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Application.pdb.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Application.pdb",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Application.pdb"
+    },
+    {
       "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\obj\\Debug\\net6.0\\build-gz\\MNT7ij8x.gz",
       "SourceId": "WebUI.Client",
       "SourceType": "Computed",
@@ -6679,6 +6696,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.IsolatedStorage.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\obj\\Debug\\net6.0\\build-gz\\N6QV6G6w.gz",
+      "SourceId": "WebUI.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/WebUI.Shared.pdb.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\WebUI.Shared.pdb",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\WebUI.Shared.pdb"
     },
     {
       "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\obj\\Debug\\net6.0\\build-gz\\nbQUZMOg.gz",
@@ -8024,23 +8058,6 @@
       "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Compression.ZipFile.dll"
     },
     {
-      "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\obj\\Debug\\net6.0\\build-gz\\vXe10X3h.gz",
-      "SourceId": "WebUI.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Application.pdb.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Application.pdb",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Application.pdb"
-    },
-    {
       "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\obj\\Debug\\net6.0\\build-gz\\wCix3Mq6.gz",
       "SourceId": "WebUI.Client",
       "SourceType": "Computed",
@@ -8481,23 +8498,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Hosting.Abstractions.dll"
-    },
-    {
-      "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\obj\\Debug\\net6.0\\build-gz\\zX9z3wVR.gz",
-      "SourceId": "WebUI.Client",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/WebUI.Shared.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\WebUI.Shared.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\WebUI.Shared.dll"
     },
     {
       "Identity": "C:\\Users\\Rafita\\source\\repos\\cleanejdg\\webui\\Client\\obj\\Debug\\net6.0\\scopedcss\\bundle\\WebUI.Client.styles.css",

@@ -10,8 +10,8 @@ namespace CleanEjdg.Core.Application.Repositories
 {
     public class UserRepository 
     {
-        public UserManager<IdentityUser> UserManager { get; set; }
-        public UserRepository(UserManager<IdentityUser> userManager)
+        public UserManager<ApplicationUser> UserManager { get; set; }
+        public UserRepository(UserManager<ApplicationUser> userManager)
         {
             UserManager = userManager;
         }
@@ -19,7 +19,7 @@ namespace CleanEjdg.Core.Application.Repositories
         //public IdentityContext DbContext;
         public async Task<IdentityResult> Create(UserCredentials userCredentials)
         {
-            return await UserManager.CreateAsync(userCredentials.ToIdentityUser(), userCredentials.Password);
+            return await UserManager.CreateAsync(userCredentials.ToApplicationUser(), userCredentials.Password);
         }
 
         public Task Delete(int id)

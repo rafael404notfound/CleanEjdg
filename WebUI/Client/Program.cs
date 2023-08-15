@@ -16,6 +16,7 @@ builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IImageService, ImageService>();
 builder.Services.AddScoped<ICartService, LocalStorageCartService>();
 builder.Services.AddScoped<AppState>();
+builder.Services.AddScoped<JwtHttpClient>();
 builder.Services.AddMudServices();
 
 

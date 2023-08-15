@@ -3,8 +3,10 @@ using Microsoft.JSInterop;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http.Json;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace CleanEjdg.Core.Application.Services
@@ -12,22 +14,10 @@ namespace CleanEjdg.Core.Application.Services
     public class TokenService : ITokenService
     {
         public IJSRuntime JSRuntime { get; set; }
-        public HttpClient HttpClient { get; set; }
         
         public TokenService (IJSRuntime jSRuntime, HttpClient httpClient)
         {
             JSRuntime = jSRuntime;
-            HttpClient = httpClient;
-        }
-
-        public async Task<LoginResult> CreateToken(UserCredentials user)
-        {
-            var response = await HttpClient.PostAsJsonAsync<UserCredentials>("api/Auth/login", user);
-            if (response.IsSuccessStatusCode)
-            {
-                return await response.Content.ReadFromJsonAsync<LoginResult>() ?? new LoginResult();
-            }
-            return new LoginResult();
         }
 
         public async Task DeleteToken()
@@ -41,17 +31,30 @@ namespace CleanEjdg.Core.Application.Services
             if (!string.IsNullOrWhiteSpace(token))
             {
                 var dataArray = token.Split(';');
-                if (dataArray.Length == 3)
+                if (dataArray.Length == 4)
                 {
                     token = dataArray[2];
                 }
             }
             return token;
         }
-
-        public async Task SetToken(LoginResult token)
+        public async Task<string> GetRefreshToken()
         {
-            await JSRuntime.InvokeVoidAsync("localStorage.setItem", "user", $"{token.UserName};{token.Email};{token.JwtBearer}").ConfigureAwait(false);
+            var token = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "user").ConfigureAwait(false);
+            if (!string.IsNullOrWhiteSpace(token))
+            {
+                var dataArray = token.Split(';');
+                if (dataArray.Length == 4)
+                {
+                    token = dataArray[3];
+                }
+            }
+            return token;
+        }
+
+        public async Task SetToken(Token token)
+        {
+            await JSRuntime.InvokeVoidAsync("localStorage.setItem", "user", $"SomeUserName;SomeEmail;{token.AccessToken};{token.RefreshToken}").ConfigureAwait(false);
         }
 
         public async Task<string> GetUsername()
@@ -59,8 +62,8 @@ namespace CleanEjdg.Core.Application.Services
             var user = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "user").ConfigureAwait(false);
             if (!string.IsNullOrWhiteSpace(user))
             {
-                var dataArray = user.Split(';', 3);
-                if (dataArray.Length == 3)
+                var dataArray = user.Split(';', 4);
+                if (dataArray.Length == 4)
                 {
                     user = dataArray[0];
                 }

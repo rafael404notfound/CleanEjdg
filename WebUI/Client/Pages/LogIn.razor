@@ -11,6 +11,7 @@
     <h4>Ya hay una session de usuario iniciada</h4>
 } else
 {
+    <MudLink Href="/register">No estas registrado? Registrate aqui</MudLink>
     <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
     <DataAnnotationsValidator/>
     <MudText>@(PrintLoginError())</MudText>
@@ -53,7 +54,7 @@
             if (result.Success)
             {
                 appState.UpdateUsername(this, result.UserName);
-                await tokenService.SetToken(result);
+                await tokenService.SetToken(result.Token);
                 navManager.NavigateTo("/gatos");
             }
         }

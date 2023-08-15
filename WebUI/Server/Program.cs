@@ -44,7 +44,7 @@ builder.Services.AddDbContext<OrderDbContext>(opts =>
     AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 });
 builder.Services.AddDbContext<IdentityContext>(opts => opts.UseNpgsql(builder.Configuration["ConnectionStrings:IdentityConnection"]));
-builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<IdentityContext>();
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<IdentityContext>();
 builder.Services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<PgsqlDbContext>());
 builder.Services.AddScoped<IProductDbContext>(provider => provider.GetRequiredService<ProductDbContext>());
 builder.Services.AddScoped<IOrderDbContext>(provider => provider.GetRequiredService<OrderDbContext>());
@@ -69,10 +69,11 @@ builder.Services.AddAuthentication(options =>
     options.TokenValidationParameters = new TokenValidationParameters()
     {
         ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"])),
+        //encoding.Ascii worked
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
         ValidateIssuer = false,
         ValidateAudience = false,
-        RequireExpirationTime = false,
+        ClockSkew = TimeSpan.Zero,
         ValidateLifetime = true
     };
 });
@@ -143,9 +144,9 @@ app.UseSwaggerUI(opts =>
     opts.SwaggerEndpoint("/swagger/v1/swagger.json", "Ejdg Api");
 });
 
-var roleManager = app.Services.CreateScope().ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-var userManager = app.Services.CreateScope().ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
-await RoleSeedData.SeedDataBase(roleManager, userManager);
+//var roleManager = app.Services.CreateScope().ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+//var userManager = app.Services.CreateScope().ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+//await RoleSeedData.SeedDataBase(roleManager, userManager);
 //var dbContext = app.Services.CreateScope().ServiceProvider.GetRequiredService<IApplicationDbContext>();
 //CatSeedData.SeedDataBase(dbContext);
 

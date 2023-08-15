@@ -1,5 +1,13 @@
 ﻿@page "/order-success"
+@inject ICartService cartService
 
 <h3>Compra realizada</h3>
 
 <p>Gracias por su apoyo</p>
+
+@code {
+	protected override async Task OnInitializedAsync()
+	{
+		await cartService.Clear();
+	}
+}

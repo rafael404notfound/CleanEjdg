@@ -1,8 +1,10 @@
 ﻿@page "/admin/pedidos"
 @using Microsoft.AspNetCore.Mvc
-@inject HttpClient httpClient
 @inject IDialogService DialogService
 @inject IImageService imgService
+@inject JwtHttpClient jwtHttpClient
+@inject NavigationManager navManager
+@inject HttpClient httpClient
 
 <div class="d-flex flex-row container-fluid">
 	<AdminNavMenu></AdminNavMenu>
@@ -56,7 +58,14 @@
 
 	protected override async Task OnInitializedAsync()
 	{
-		Orders = await httpClient.GetFromJsonAsync<List<Order>>("api/orders") ?? new List<Order>();
+		//Orders = await httpClient.GetFromJsonAsync<List<Order>>("api/orders") ?? new List<Order>();
+		//var result = await tokenService.HttpGetWithTokens<List<Order>>("api/orders");
+		var result = await jwtHttpClient.HttpRequestWithTokens<List<Order>>("api/orders", httpClient.GetAsync);
+		if (result.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+		{			
+			navManager.NavigateTo("/login");
+		}
+		if (result.Result != null) Orders = result.Result;
 		SentOrders = Orders.Where(o => o.Sent == true);
 		NotSentOrders = Orders.Where(o => o.Sent == false);
 	}
@@ -64,7 +73,11 @@
 	private async Task UpdateOrder(int id, bool sent)
 	{
 		var order = Orders.FirstOrDefault(o => o.Id == id);
-		order.Sent = sent; 
-		await httpClient.PutAsJsonAsync("api/orders", order);
+		order.Sent = sent;
+		//await httpClient.PutAsJsonAsync("api/orders", order);
+		//var result = await tokenService.HttpPutWithTokens<Order>("api/orders", order);
+		HttpResult<Order> result = await jwtHttpClient.HttpRequestWithTokens<Order>("api/orders", order, (route, entity) => httpClient.PutAsJsonAsync(route, entity));
+		if (result.StatusCode == System.Net.HttpStatusCode.Unauthorized) navManager.NavigateTo("/login");
+		
 	}
 }

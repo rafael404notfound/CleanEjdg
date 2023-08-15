@@ -1,0 +1,97 @@
+﻿@page "/register"
+@inject HttpClient httpClient 
+@inject IJSRuntime jsr
+@inject NavigationManager navManager
+@inject ITokenService tokenService
+@inject AppState appState
+@implements IDisposable
+
+@if(IsLoggedIn)
+{
+    <h4>Ya hay una session de usuario iniciada</h4>
+} else
+{
+    <EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator/>
+    <MudText>@(PrintLoginError())</MudText>
+    <ValidationSummary></ValidationSummary>
+    <MudCard>
+        <MudCardContent>
+            <MudTextField Label="User Name" HelperText="Max. 8 characters"
+                            @bind-Value="model.UserName" For="@(() => model.UserName)"/>
+            <MudTextField Label="Email" Class="mt-3"
+                            @bind-Value="model.Email" For="@(() => model.Email)"/>
+            <MudTextField Label="Password" HelperText="Choose a strong password" Class="mt-3"
+                            @bind-Value="model.Password" For="@(() => model.Password)" InputType="InputType.Password"/>
+            <MudTextField Label="Password" HelperText="Repeat password" Class="mt-3"
+                            @bind-Value="model.PasswordRepeat" For="@(() => model.PasswordRepeat)" InputType="InputType.Password"/>
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Register</MudButton>
+        </MudCardActions>
+    </MudCard>    
+</EditForm>
+
+}
+
+@code {
+    private RegisterUserModel model { get; set; } = new RegisterUserModel();
+    private bool WrongCredentials;
+    private bool IsLoggedIn { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        WrongCredentials = false;
+        IsLoggedIn = await CheckIfLoggedIn();
+        appState.StateChanged += async (source, property) => await AppState_StateChanged(source, property);
+    }
+
+    private async Task OnValidSubmit()
+    {
+        var response = await httpClient.PostAsJsonAsync<RegisterUserModel>("api/auth/register", model);
+        if (response.IsSuccessStatusCode)
+        {
+            response = await httpClient.PostAsJsonAsync<UserCredentials>("api/auth/login",
+                new UserCredentials { Email = model.Email, Password = model.Password, UserName = model.UserName });
+            var result = await response.Content.ReadFromJsonAsync<LoginResult>();
+
+            if (response.IsSuccessStatusCode && result != null)
+            {                
+                appState.UpdateUsername(this, result.UserName);
+                await tokenService.SetToken(result.Token);
+                navManager.NavigateTo("/gatos");
+            }
+        }
+        else
+        {
+            navManager.NavigateTo("/UnableToRegister");
+        }
+    }
+
+    public string PrintLoginError()
+    {
+        if (WrongCredentials)
+        {
+            return "InvalidCredential";
+        }
+        return "";
+    }
+
+    public async Task<bool> CheckIfLoggedIn(){
+        var userdata = await jsr.InvokeAsync<string>("localStorage.getItem", "user");
+        return !string.IsNullOrWhiteSpace(userdata);
+    }
+
+    private async Task AppState_StateChanged(ComponentBase source, string property)
+    {
+        if (source != this)
+        {
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
+    void IDisposable.Dispose()
+    {
+        appState.StateChanged -= async (source, property) => await AppState_StateChanged(source, property);
+    }
+}

@@ -13,6 +13,7 @@ namespace WebUI.Server.Controllers
 
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize(Roles = $"{UserRoles.Admin}, {UserRoles.OrderEditor}")]
     public class OrdersController : ControllerBase
     {
         IRepositoryBase<Order> OrderRepo;
@@ -98,7 +99,7 @@ namespace WebUI.Server.Controllers
         public async Task<IActionResult> UpdateOrder([FromBody]Order order)
         {
             await OrderRepo.Update(order);
-            return Ok();
+            return Ok(order);
         }
     }
 }
